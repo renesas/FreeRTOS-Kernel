@@ -1,5 +1,5 @@
 /*
- * FreeRTOS Kernel V10.3.1
+ * FreeRTOS Kernel V10.3.0
  * Copyright (C) 2020 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -39,13 +39,13 @@
  * @return Pointer to the memory region if the allocation is successful, NULL
  * otherwise.
  */
-void * pvPortMalloc( size_t xWantedSize );
+void *pvPortMalloc( size_t xWantedSize );
 
 /**
  * @brief Frees the previously allocated memory.
  *
  * @param[in] pv Pointer to the memory to be freed.
  */
-void vPortFree( void * pv );
+void vPortFree( void *pv );
 
 #endif /* __SECURE_HEAP_H__ */

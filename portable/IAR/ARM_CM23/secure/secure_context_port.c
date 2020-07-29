@@ -1,5 +1,5 @@
 /*
- * FreeRTOS Kernel V10.3.1
+ * FreeRTOS Kernel V10.3.0
  * Copyright (C) 2020 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -37,12 +37,12 @@ extern void SecureContext_SaveContextAsm( SecureContextHandle_t xSecureContextHa
 
 secureportNON_SECURE_CALLABLE void SecureContext_LoadContext( SecureContextHandle_t xSecureContextHandle )
 {
-    SecureContext_LoadContextAsm( xSecureContextHandle );
+	SecureContext_LoadContextAsm( xSecureContextHandle );
 }
 /*-----------------------------------------------------------*/
 
 secureportNON_SECURE_CALLABLE void SecureContext_SaveContext( SecureContextHandle_t xSecureContextHandle )
 {
-    SecureContext_SaveContextAsm( xSecureContextHandle );
+	SecureContext_SaveContextAsm( xSecureContextHandle );
 }
 /*-----------------------------------------------------------*/

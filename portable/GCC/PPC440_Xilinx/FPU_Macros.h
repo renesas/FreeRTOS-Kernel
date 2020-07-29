@@ -1,5 +1,5 @@
 /*
- * FreeRTOS Kernel V10.3.1
+ * FreeRTOS Kernel V10.3.0
  * Copyright (C) 2020 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -26,19 +26,20 @@
  */
 
 /* When switching out a task, if the task tag contains a buffer address then
- * save the flop context into the buffer. */
-#define traceTASK_SWITCHED_OUT()                                         \
-    if( pxCurrentTCB->pxTaskTag != NULL )                                \
-    {                                                                    \
-        extern void vPortSaveFPURegisters( void * );                     \
-        vPortSaveFPURegisters( ( void * ) ( pxCurrentTCB->pxTaskTag ) ); \
-    }
+save the flop context into the buffer. */
+#define traceTASK_SWITCHED_OUT()											\
+	if( pxCurrentTCB->pxTaskTag != NULL )									\
+	{																		\
+		extern void vPortSaveFPURegisters( void * );						\
+		vPortSaveFPURegisters( ( void * ) ( pxCurrentTCB->pxTaskTag ) );	\
+	}
 
 /* When switching in a task, if the task tag contains a buffer address then
- * load the flop context from the buffer. */
-#define traceTASK_SWITCHED_IN()                                             \
-    if( pxCurrentTCB->pxTaskTag != NULL )                                   \
-    {                                                                       \
-        extern void vPortRestoreFPURegisters( void * );                     \
-        vPortRestoreFPURegisters( ( void * ) ( pxCurrentTCB->pxTaskTag ) ); \
-    }
+load the flop context from the buffer. */
+#define traceTASK_SWITCHED_IN()												\
+	if( pxCurrentTCB->pxTaskTag != NULL )									\
+	{																		\
+		extern void vPortRestoreFPURegisters( void * );						\
+		vPortRestoreFPURegisters( ( void * ) ( pxCurrentTCB->pxTaskTag ) );	\
+	}
+

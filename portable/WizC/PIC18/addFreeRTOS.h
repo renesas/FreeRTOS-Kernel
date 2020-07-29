@@ -1,5 +1,5 @@
 /*
- * FreeRTOS Kernel V10.3.1
+ * FreeRTOS Kernel V10.3.0
  * Copyright (C) 2020 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -26,13 +26,13 @@
  */
 
 /*
- * Changes from V3.0.0
- *
- * Changes from V3.0.1
- *
- * Changes from V4.0.1
- *  Uselib pragma added for Croutine.c
- */
+Changes from V3.0.0
+
+Changes from V3.0.1
+
+Changes from V4.0.1
+    Uselib pragma added for Croutine.c
+*/
 
 /*
  * The installation script will automatically prepend this file to the default FreeRTOS.h.
@@ -41,7 +41,7 @@
 #ifndef WIZC_FREERTOS_H
 #define WIZC_FREERTOS_H
 
-#pragma noheap
+#pragma	noheap
 #pragma wizcpp expandnl   on
 #pragma wizcpp searchpath "$__PATHNAME__/libFreeRTOS/Include/"
 #pragma wizcpp uselib     "$__PATHNAME__/libFreeRTOS/Modules/Croutine.c"
@@ -50,4 +50,4 @@
 #pragma wizcpp uselib     "$__PATHNAME__/libFreeRTOS/Modules/List.c"
 #pragma wizcpp uselib     "$__PATHNAME__/libFreeRTOS/Modules/Port.c"
 
-#endif /* WIZC_FREERTOS_H */
+#endif	/* WIZC_FREERTOS_H */

@@ -1,5 +1,5 @@
 /*
- * FreeRTOS Kernel V10.3.1
+ * FreeRTOS Kernel V10.3.0
  * Copyright (C) 2020 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -37,13 +37,13 @@
 /**
  * @brief PSP value when no task's context is loaded.
  */
-#define securecontextNO_STACK    0x0
+#define securecontextNO_STACK	0x0
 
 /**
  * @brief Opaque handle.
  */
 struct SecureContext;
-typedef struct SecureContext * SecureContextHandle_t;
+typedef struct SecureContext*	SecureContextHandle_t;
 /*-----------------------------------------------------------*/
 
 /**
@@ -69,11 +69,10 @@ void SecureContext_Init( void );
  * @return Opaque context handle if context is successfully allocated, NULL
  * otherwise.
  */
-#if ( configENABLE_MPU == 1 )
-    SecureContextHandle_t SecureContext_AllocateContext( uint32_t ulSecureStackSize,
-                                                         uint32_t ulIsTaskPrivileged );
+#if( configENABLE_MPU == 1 )
+	SecureContextHandle_t SecureContext_AllocateContext( uint32_t ulSecureStackSize, uint32_t ulIsTaskPrivileged );
 #else /* configENABLE_MPU */
-    SecureContextHandle_t SecureContext_AllocateContext( uint32_t ulSecureStackSize );
+	SecureContextHandle_t SecureContext_AllocateContext( uint32_t ulSecureStackSize );
 #endif /* configENABLE_MPU */
 
 /**
