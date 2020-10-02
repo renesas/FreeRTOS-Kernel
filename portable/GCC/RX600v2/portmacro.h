@@ -43,11 +43,13 @@ extern "C" {
  *-----------------------------------------------------------
  */
 
-/* When the FIT configurator or the Smart Configurator is used, platform.h has to be
- * used. */
+/* When the Smart Configurator is used, platform.h has to be used. Otherwise iodefine.h
+ * can be be used. The default setting is to use iodefine.h due to the compatibility. */
 #ifndef configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H
-    #define configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H 0
+	#define configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H 0
 #endif
+
+/*-----------------------------------------------------------*/
 
 /* Type definitions - these are a bit legacy and not really used now, other than
 portSTACK_TYPE and portBASE_TYPE. */
@@ -74,6 +76,7 @@ typedef unsigned long UBaseType_t;
 	not need to be guarded with a critical section. */
 	#define portTICK_TYPE_IS_ATOMIC 1
 #endif
+
 /*-----------------------------------------------------------*/
 
 /* Hardware specifics. */

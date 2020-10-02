@@ -37,10 +37,10 @@
 #include "string.h"
 
 /* Hardware specifics. */
-#if defined( configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H ) && ( configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H == 1 )
-	#include "platform.h"
+#if (configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H == 1)
+#include "platform.h"
 #else
-	#include "iodefine.h"
+#include "iodefine.h"
 #endif
 
 /*-----------------------------------------------------------*/

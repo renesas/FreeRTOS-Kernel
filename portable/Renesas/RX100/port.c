@@ -40,7 +40,11 @@
 #include "string.h"
 
 /* Hardware specifics. */
+#if (configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H == 1)
+#include "platform.h"
+#else
 #include "iodefine.h"
+#endif
 
 /*-----------------------------------------------------------*/
 

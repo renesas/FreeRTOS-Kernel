@@ -40,7 +40,9 @@
 #include "string.h"
 
 /* Hardware specifics. */
-#include "machine.h"
+#if ( configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H == 1 )
+	#include "platform.h"
+#endif
 
 /*-----------------------------------------------------------*/
 
@@ -81,7 +83,7 @@ extern void prvStartFirstTask( void );
  * The tick ISR handler.  The peripheral used is configured by the application
  * via a hook/callback function.
  */
-__interrupt static void prvTickISR( void );
+static __interrupt void prvTickISR( void );
 
 /*
  * Sets up the periodic ISR used for the RTOS tick using the CMT.
@@ -247,8 +249,12 @@ BaseType_t xPortStartScheduler( void )
 }
 /*-----------------------------------------------------------*/
 
-#pragma vector = configTICK_VECTOR
-__interrupt static void prvTickISR( void )
+#if ( configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H == 1 )
+	#pragma vector = _VECT( configTICK_VECTOR )
+#else
+	#pragma vector = configTICK_VECTOR
+#endif
+static __interrupt void prvTickISR( void )
 {
 	/* Re-enable interrupts. */
 	__enable_interrupt();

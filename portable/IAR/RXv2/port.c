@@ -37,7 +37,9 @@
 #include "string.h"
 
 /* Hardware specifics. */
-#include <machine.h>
+#if ( configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H == 1 )
+	#include "platform.h"
+#endif
 
 /*-----------------------------------------------------------*/
 
@@ -170,7 +172,11 @@ extern void vApplicationSetupTimerInterrupt( void );
 }
 /*-----------------------------------------------------------*/
 
-#pragma vector = configTICK_VECTOR
+#if ( configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H == 1 )
+	#pragma vector = _VECT( configTICK_VECTOR )
+#else
+	#pragma vector = configTICK_VECTOR
+#endif
 __interrupt void vTickISR( void )
 {
 	/* Re-enable interrupts. */
