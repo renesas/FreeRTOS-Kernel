@@ -35,6 +35,9 @@
 extern "C" {
 #endif
 
+/* Hardware specifics. */
+#include "machine.h"
+
 /*-----------------------------------------------------------
  * Port specific definitions.
  *
@@ -44,26 +47,6 @@ extern "C" {
  * These settings should not be altered.
  *-----------------------------------------------------------
  */
-
-/* When the Smart Configurator is used, platform.h has to be used. Otherwise iodefine.h
- * can be be used. The default setting is to use iodefine.h due to the compatibility. */
-#ifndef configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H
-	#define configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H 0
-#endif
-
-/* The Smart Configurator provides its own tick interrupt configuration function but
- * it does not support the tickless idle/low power functionality. */
-#if (configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H == 1)
-	#ifndef configSETUP_TICK_INTERRUPT
-		extern void vApplicationSetupTimerInterrupt( void );
-		#define configSETUP_TICK_INTERRUPT() vApplicationSetupTimerInterrupt()
-	#endif
-	#ifndef configUSE_TICKLESS_IDLE
-		#define configUSE_TICKLESS_IDLE 0
-	#endif
-#endif
-
-/*-----------------------------------------------------------*/
 
 /* Type definitions - these are a bit legacy and not really used now, other than
 portSTACK_TYPE and portBASE_TYPE. */
@@ -91,7 +74,6 @@ typedef unsigned long UBaseType_t;
 	not need to be guarded with a critical section. */
 	#define portTICK_TYPE_IS_ATOMIC 1
 #endif
-
 /*-----------------------------------------------------------*/
 
 /* Hardware specifics. */
