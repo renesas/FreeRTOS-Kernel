@@ -46,9 +46,13 @@
  *-----------------------------------------------------------
  */
 
-/* When the FIT configurator or the Smart Configurator is used, platform.h has to be
- * used.  Otherwise iodefine.h can be be used.  The default setting is to use iodefine.h
- * due to the compatibility. */
+/* If configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H is set to 0 then iodefine.h
+ * is included and used in FreeRTOS Kernel's Renesas RX port.  If the macro is set
+ * to 1 then platform.h is included and used in the port.  If the macro is set to 2
+ * then neither iodefine.h nor platform.h are included.  If the macro is undefined,
+ * it is set to 0 (CC-RX/GNURX) or 2 (ICCRX) internally for backward compatibility.
+ * When the FIT configurator or the Smart Configurator is used, platform.h has to be
+ * used. */
 #ifndef configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H
     #define configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H    0
 #endif
@@ -61,15 +65,17 @@
  * of any DPFPU context (even if DPFPU registers are used). */
 #ifdef __DPFPU
     /* The compiler may use DPFPU registers. */
-    #ifdef configUSE_TASK_DPFPU_SUPPORT
-        #define portUSE_TASK_DPFPU_SUPPORT    configUSE_TASK_DPFPU_SUPPORT
-    #else
-        #define portUSE_TASK_DPFPU_SUPPORT    1
+    #ifndef configUSE_TASK_DPFPU_SUPPORT
+        #define configUSE_TASK_DPFPU_SUPPORT    1
     #endif
 #else
     /* The compiler does not use DPFPU registers. */
-    #define portUSE_TASK_DPFPU_SUPPORT    0
+    #ifdef configUSE_TASK_DPFPU_SUPPORT
+        #undef configUSE_TASK_DPFPU_SUPPORT
+    #endif
+    #define configUSE_TASK_DPFPU_SUPPORT    0
 #endif
+#define portUSE_TASK_DPFPU_SUPPORT          configUSE_TASK_DPFPU_SUPPORT
 
 #ifdef __FPU
     /* The compiler may use FPSW register. */
@@ -81,6 +87,9 @@
 
 #ifdef __RXV1
     /* The CPU has only one accumulator. */
+    #define portUSE_TASK_ACC_SUPPORT    1
+#elif !defined( __RXV2 ) && !defined( __RXV3 ) && ( __RENESAS_VERSION__ < 0x03010000 )
+    /* The CPU is RXv1 and has only one accumulator. */
     #define portUSE_TASK_ACC_SUPPORT    1
 #else
     /* The CPU has two accumulators. */
@@ -118,23 +127,21 @@ typedef unsigned long    UBaseType_t;
 /*-----------------------------------------------------------*/
 
 /* Inline assembler specifics. */
-/* *INDENT-OFF* */
-#ifdef __CDT_PARSER__
-    #define _portASM( ... )
-#else
-    #ifndef __cplusplus
-        #define _portASM( ... )      __VA_ARGS__
+#if ( defined( __STDC_VERSION__ ) && ( __STDC_VERSION__ >= 199901L ) )
+    /* *INDENT-OFF* */
+    #ifdef __CDT_PARSER__
+        #define _portASM( ... )          (void) ( #__VA_ARGS__ "\n" );
     #else
-        /* CC-RX' C++ mode does not support variadic macros */
+        #define _portASM( ... )          __VA_ARGS__
     #endif
-#endif
-#define portASM( ... )               _portASM( __VA_ARGS__ )
-#define portASM_LAB_NEXT( name )     ?+
-#define portASM_LAB_PREV( name )     ?-
-#define portASM_LAB( name_colon )    _portASM( ?: )
-#define portASM_BEGIN
-#define portASM_END
-/* *INDENT-ON* */
+    #define portASM( ... )               _portASM( __VA_ARGS__ )
+    #define portASM_LAB_NEXT( name )     ?+
+    #define portASM_LAB_PREV( name )     ?-
+    #define portASM_LAB( name_colon )    _portASM( ?: )
+    #define portASM_BEGIN
+    #define portASM_END
+    /* *INDENT-ON* */
+#endif /* if ( defined( __STDC_VERSION__ ) && ( __STDC_VERSION__ >= 199901L ) ) */
 
 /*-----------------------------------------------------------*/
 

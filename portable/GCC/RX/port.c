@@ -36,17 +36,33 @@
 #include "string.h"
 
 /* Hardware specifics. */
-#if ( configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H == 1 )
-    #include "platform.h"
-#else
+#if ( configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H == 0 )
     #include "iodefine.h"
+#elif ( configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H == 1 )
+    #include "platform.h"
+#elif ( configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H == 2 )
+    /* Nothing to be included here. */
+#else
+    #error Invalid configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H setting - configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H must be set to 0, 1, 2, or left undefined.
 #endif
 
-/* Some checks for this port. */
-#if ( portUSE_TASK_DPFPU_SUPPORT == 1 ) || ( portUSE_TASK_DPFPU_SUPPORT == 2 )
+/* Miscellaneous checks for this port. */
+#if ( configUSE_TASK_DPFPU_SUPPORT == 1 ) || ( configUSE_TASK_DPFPU_SUPPORT == 2 )
     #warning Testing for DPFPU support in this port is not yet complete
-#elif  ( portUSE_TASK_DPFPU_SUPPORT != 0 )
+#elif  ( configUSE_TASK_DPFPU_SUPPORT != 0 )
     #error Invalid configUSE_TASK_DPFPU_SUPPORT setting - configUSE_TASK_DPFPU_SUPPORT must be set to 0, 1, 2, or left undefined.
+#endif
+
+#if !defined( __RXv1__ ) && !defined( __RXv2__ ) && !defined( __RXv3__ )
+    #if ( __GNUC__ < 8 )
+        /* Not necessary: #error This old version of GNURX is not supported. */
+    #else
+        #warning This new CPU core may not be supported.
+    #endif
+#endif
+
+#if !defined( __STDC_VERSION__ ) || ( __STDC_VERSION__ < 199901L )
+    #error This port needs C99 or later.
 #endif
 
 /*-----------------------------------------------------------*/
@@ -101,7 +117,7 @@ static void prvStartFirstTask( void ) __attribute__( ( naked ) );
  */
 #if ( configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H == 1 )
 
-    R_BSP_PRAGMA_INTERRUPT( vSoftwareInterruptISR, VECT( ICU, SWINT ) )
+    R_BSP_PRAGMA_INTERRUPT( vSoftwareInterruptISR, _VECT( _ICU_SWINT ) )
     R_BSP_ATTRIB_INTERRUPT void vSoftwareInterruptISR( void ) __attribute__( ( naked ) );
 
 #else
