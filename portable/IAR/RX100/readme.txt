@@ -1,4 +1,6 @@
-The following table shows which port is recommended to be used.
+The following port layers are no longer recommended to be used other than using tickless idle functionality
+of RX100 port layers and/or using C89 specification and/or using old version of ICCRX.  The following table
+shows which port layer can be used if you have to use one of the following port layers.
 
 
 RX MCU Group    CPU     FPU         FPU         Port Layer
@@ -28,16 +30,16 @@ RX634           RXv1    Yes         ---         Renesas/RX600           GCC/RX60
 RX63N,RX631     RXv1    Yes         ---         Renesas/RX600           GCC/RX600           IAR/RX600
 RX64M           RXv2    Yes         ---         Renesas/RX600v2         GCC/RX600v2         IAR/RXv2
 RX65N,RX651     RXv2    Yes         ---         Renesas/RX600v2         GCC/RX600v2         IAR/RXv2
-RX66N           RXv3    Yes         Yes         Renesas/RX700v3_DPFPU   GCC/RX700v3_DPFPU   IAR/RX700v3_DPFPU
+RX66N           RXv3    Yes         Yes         N/A (*5)                N/A (*5)            N/A (*5)
 RX62T           RXv1    Yes         ---         Renesas/RX600           GCC/RX600           IAR/RX600
 RX62G           RXv1    Yes         ---         Renesas/RX600           GCC/RX600           IAR/RX600
 RX63T           RXv1    Yes         ---         Renesas/RX600           GCC/RX600           IAR/RX600
-RX66T           RXv3    Yes         No          Renesas/RX600v2 (*5)    GCC/RX600v2 (*5)    IAR/RXv2 (*5)
+RX66T           RXv3    Yes         No          Renesas/RX600v2         GCC/RX600v2         IAR/RXv2
 
 RX71M           RXv2    Yes         ---         Renesas/RX600v2         GCC/RX600v2         IAR/RXv2
-RX72M           RXv3    Yes         Yes         Renesas/RX700v3_DPFPU   GCC/RX700v3_DPFPU   IAR/RX700v3_DPFPU
-RX72N           RXv3    Yes         Yes         Renesas/RX700v3_DPFPU   GCC/RX700v3_DPFPU   IAR/RX700v3_DPFPU
-RX72T           RXv3    Yes         No          Renesas/RX600v2 (*5)    GCC/RX600v2 (*5)    IAR/RXv2 (*5)
+RX72M           RXv3    Yes         Yes         N/A (*5)                N/A (*5)            N/A (*5)
+RX72N           RXv3    Yes         Yes         N/A (*5)                N/A (*5)            N/A (*5)
+RX72T           RXv3    Yes         No          Renesas/RX600v2         GCC/RX600v2         IAR/RXv2
 
 Notes:
 
@@ -55,9 +57,7 @@ configTICK_VECTOR (in FreeRTOSConfig.h).
 
 *4: RX600 ports use MVTIPL instruction but RX610 MCUs don't support this instruction.
 
-*5: RX700v3_DPFPU ports are also available with the following definition in FreeRTOSConfig.h.
-
-#define configUSE_TASK_DPFPU_SUPPORT            0
+*5: Please use generic RX port layers (i.e. Renesas/RX, GCC/RX, IAR/RX).
 
 *6: PriorityDefinitions.h has to be provided for port_asm.s in case of other than RX700v3_DPFPU port.
 It contains two definitions of interrupt priority like the following.
