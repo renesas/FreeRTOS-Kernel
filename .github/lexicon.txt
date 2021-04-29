@@ -1529,6 +1529,7 @@ prvinitialisenewstreambuffer
 prvinitialisenewtimer
 prvinsertblockintofreelist
 prvlockqueue
+prvnotifyqueuesetcontainer
 prvportmalloc
 prvportresetpic
 prvprocesssimulatedinterrupts
@@ -1617,6 +1618,7 @@ pvowner
 pvparameter
 pvparameters
 pvportmalloc
+pvportmallocstack
 pvportrealloc
 pvreg
 pvrxdata
@@ -1686,6 +1688,7 @@ pxprevious
 pxpreviouswaketime
 pxqueue
 pxqueuebuffer
+pxqueuesetcontainer
 pxramstack
 pxreadycoroutinelists
 pxreadytaskslists
@@ -1705,6 +1708,7 @@ pxstreambuffercreatestatic
 pxtagvalue
 pxtask
 pxtaskbuffer
+pxtaskcode
 pxtaskdefinition
 pxtaskstatus
 pxtaskstatusarray
@@ -2976,6 +2980,7 @@ xtaskcreate
 xtaskcreaterestricted
 xtaskcreaterestrictedstatic
 xtaskcreatestatic
+xtaskdelayuntil
 xtaskdetails
 xtaskendscheduler
 xtaskgetapplicationtasktag
@@ -3016,6 +3021,7 @@ xtaskswaitingforbits
 xtaskswaitingtermination
 xtaskswaitingtoreceive
 xtaskswaitingtosend
+xtasktodelete
 xtasktonotify
 xtasktoquery
 xtasktoresume
@@ -3076,6 +3082,7 @@ xvalueofinsertion
 xvtorconst
 xwaitforallbits
 xwantedsize
+xwasdelayed
 xwritevalue
 xxr
 xyieldpending
