@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refinfo>
+    <!-- multiple versions permitted -->
+    <toolchain>
+        <brand>Renesas</brand>
+        <product>RXC</product>
+        <version>2.07.00</version>
+    </toolchain>
+    <toolchain>
+        <brand>GNU</brand>
+        <product>GNURX</product>
+        <version>4.8.4</version>
+    </toolchain>
+    <!-- only one target entry allowed; multiple sub tags permitted -->
+    <target>
+        <toolchain>RXC</toolchain>
+        <family>RX</family>
+        <series>RX100</series>
+        <series>RX200</series>
+        <series>RX600</series>
+        <series>RX700</series>
+        <group>RX130</group>
+        <group>RX230</group>
+        <group>RX231</group>
+        <group>RX23W</group>
+        <group>RX64M</group>
+        <group>RX651</group>
+        <group>RX65N</group>
+        <group>RX66T</group>
+        <group>RX66N</group>
+        <group>RX71M</group>
+        <group>RX72T</group>
+        <group>RX72N</group>
+        <group>RX72M</group>
+        <board>RSKRX64M</board>
+        <board>RSKRX65N</board>
+        <board>RSKRX65N-2MB</board>
+        <board>RSKRX66T</board>
+        <board>RSKRX66N</board>
+        <board>RSKRX71M</board>
+        <board>RSKRX72T</board>
+        <board>RSKRX72N</board>
+        <board>RSKRX72M</board>
+    </target>
+    <target>
+        <toolchain>GNURX</toolchain>
+        <family>RX</family>
+        <series>RX100</series>
+        <series>RX200</series>
+        <series>RX600</series>
+        <series>RX700</series>
+        <group>RX130</group>
+        <group>RX230</group>
+        <group>RX231</group>
+        <group>RX23W</group>
+        <group>RX64M</group>
+        <group>RX651</group>
+        <group>RX65N</group>
+        <group>RX66T</group>
+        <group>RX66N</group>
+        <group>RX71M</group>
+        <group>RX72T</group>
+        <group>RX72N</group>
+        <group>RX72M</group>
+        <board>RSKRX64M</board>
+        <board>RSKRX65N</board>
+        <board>RSKRX65N-2MB</board>
+        <board>RSKRX66T</board>
+        <board>RSKRX66N</board>
+        <board>RSKRX71M</board>
+        <board>RSKRX72T</board>
+        <board>RSKRX72N</board>
+        <board>RSKRX72M</board>
+    </target>
+    <!-- only one package entry allowed -->
+    <!-- multiple dependencies, applications, functions, and incdirs permitted -->
+    <package>
+        <type>rtosmodule</type>
+        <name>FreeRTOSKernel</name>
+        <version>10.4.3-rx-1.0.0</version>
+        <!-- include path setting -->
+        <incdir>
+            <path>src/FreeRTOS/Source/include</path>
+        </incdir>
+        <incdir>
+            <toolchain>GNURX</toolchain>
+            <series>RX100</series>
+            <group>RX130</group>
+            <path>src/FreeRTOS/Source/portable/GCC/RX100</path>
+        </incdir>
+        <incdir>
+            <toolchain>GNURX</toolchain>
+            <series>RX200</series>
+            <group>RX230</group>
+            <group>RX231</group>
+            <group>RX23W</group>
+            <path>src/FreeRTOS/Source/portable/GCC/RX200</path>
+        </incdir>
+        <incdir>
+            <toolchain>GNURX</toolchain>
+            <series>RX600</series>
+            <group>RX64M</group>
+            <group>RX651</group>
+            <group>RX65N</group>
+            <group>RX66T</group>
+            <group>RX66N</group>
+            <group>RX71M</group>
+            <group>RX72T</group>
+            <group>RX72N</group>
+            <group>RX72M</group>
+            <path>src/FreeRTOS/Source/portable/GCC/RX600v2</path>
+        </incdir>
+        <incdir>
+            <toolchain>RXC</toolchain>
+            <series>RX100</series>
+            <group>RX130</group>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX100</path>
+        </incdir>
+        <incdir>
+            <toolchain>RXC</toolchain>
+            <series>RX200</series>
+            <group>RX230</group>
+            <group>RX231</group>
+            <group>RX23W</group>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX200</path>
+        </incdir>
+        <incdir>
+            <toolchain>RXC</toolchain>
+            <series>RX600</series>
+            <group>RX64M</group>
+            <group>RX651</group>
+            <group>RX65N</group>
+            <group>RX66T</group>
+            <group>RX66N</group>
+            <group>RX71M</group>
+            <group>RX72T</group>
+            <group>RX72N</group>
+            <group>RX72M</group>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX600v2</path>
+        </incdir>
+        <incdir>
+            <path>src/frtos_startup</path>
+        </incdir>
+        <incdir>
+            <path>src/frtos_config</path>
+        </incdir>
+        <!-- copy source codes -->
+        <impdir>
+            <folder>include</folder>
+            <path>src/FreeRTOS/Source/include</path>
+        </impdir>
+        <impdir>
+            <file>croutine.c</file>
+            <path>src/FreeRTOS/Source</path>
+        </impdir>
+        <impdir>
+            <file>event_groups.c</file>
+            <path>src/FreeRTOS/Source</path>
+        </impdir>
+        <impdir>
+            <file>list.c</file>
+            <path>src/FreeRTOS/Source</path>
+        </impdir>
+        <impdir>
+            <file>queue.c</file>
+            <path>src/FreeRTOS/Source</path>
+        </impdir>
+        <impdir>
+            <file>stream_buffer.c</file>
+            <path>src/FreeRTOS/Source</path>
+        </impdir>
+        <impdir>
+            <file>tasks.c</file>
+            <path>src/FreeRTOS/Source</path>
+        </impdir>
+        <impdir>
+            <file>timers.c</file>
+            <path>src/FreeRTOS/Source</path>
+        </impdir>
+        <impdir>
+            <folder>configuration/config_files</folder>
+            <path>src/frtos_config</path>
+        </impdir>
+        <impdir>
+            <folder>configuration/startup</folder>
+            <path>src/frtos_startup</path>
+        </impdir>
+        <!-- note: only 1 heap file is needed, other files are references -->
+        <impdir>
+            <folder>portable/MemMang</folder>
+            <path>src/FreeRTOS/Source/portable/MemMang</path>
+        </impdir>
+        <impdir>
+            <toolchain>RXC</toolchain>
+            <group>RX130</group>
+            <folder>portable/Renesas/RX100</folder>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX100</path>
+        </impdir>
+        <impdir>
+            <toolchain>RXC</toolchain>
+            <group>RX230</group>
+            <group>RX231</group>
+            <group>RX23W</group>
+            <folder>portable/Renesas/RX200</folder>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX200</path>
+        </impdir>
+        <impdir>
+            <toolchain>RXC</toolchain>
+            <group>RX64M</group>
+            <group>RX651</group>
+            <group>RX65N</group>
+            <group>RX66T</group>
+            <group>RX66N</group>
+            <group>RX71M</group>
+            <group>RX72T</group>
+            <group>RX72N</group>
+            <group>RX72M</group>
+            <folder>portable/Renesas/RX600v2</folder>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX600v2</path>
+        </impdir>
+        <impdir>
+            <toolchain>GNURX</toolchain>
+            <group>RX130</group>
+            <folder>portable/GCC/RX100</folder>
+            <path>src/FreeRTOS/Source/portable/GCC/RX100</path>
+        </impdir>
+        <impdir>
+            <toolchain>GNURX</toolchain>
+            <group>RX230</group>
+            <group>RX231</group>
+            <group>RX23W</group>
+            <folder>portable/GCC/RX200</folder>
+            <path>src/FreeRTOS/Source/portable/GCC/RX200</path>
+        </impdir>
+        <impdir>
+            <toolchain>GNURX</toolchain>
+            <group>RX64M</group>
+            <group>RX651</group>
+            <group>RX65N</group>
+            <group>RX66T</group>
+            <group>RX66N</group>
+            <group>RX71M</group>
+            <group>RX72T</group>
+            <group>RX72N</group>
+            <group>RX72M</group>
+            <folder>portable/GCC/RX600v2</folder>
+            <path>src/FreeRTOS/Source/portable/GCC/RX600v2</path>
+        </impdir>
+        <impdir>
+            <file>portable/readme.txt</file>
+            <path>src/FreeRTOS/Source/portable</path>
+        </impdir>
+    </package>
+    <!-- Heap Information. The purpose is to provide information to estimate Heap Size -->
+    <!-- The redundant zero number before a numerical data may cause it to be wrong, because some numerical data are input of an javascript engine -->
+    <heap>
+        <property id="configUSE_TRACE_FACILITY">
+            <path>src/frtos_config/FreeRTOSConfig.h</path>
+        </property>
+        <property id="configUSE_MUTEXES">
+            <path>src/frtos_config/FreeRTOSConfig.h</path>
+        </property>
+        <property id="configUSE_APPLICATION_TASK_TAG">
+            <path>src/frtos_config/FreeRTOSConfig.h</path>
+        </property>
+        <property id="configUSE_QUEUE_SETS">
+            <id>configUSE_QUEUE_SETS</id>
+            <path>src/frtos_config/FreeRTOSConfig.h</path>
+        </property>
+        <property id="configRECORD_STACK_HIGH_ADDRESS">
+            <priorityPath>src/frtos_config/FreeRTOSConfig.h</priorityPath>
+            <path>src/FreeRTOS/Source/include/FreeRTOS.h</path>
+        </property>
+        <property id="configNUM_THREAD_LOCAL_STORAGE_POINTERS">
+            <priorityPath>src/frtos_config/FreeRTOSConfig.h</priorityPath>
+            <path>src/FreeRTOS/Source/include/FreeRTOS.h</path>
+        </property>
+        <property id="configUSE_TASK_NOTIFICATIONS">
+            <priorityPath>src/frtos_config/FreeRTOSConfig.h</priorityPath>
+            <path>src/FreeRTOS/Source/include/FreeRTOS.h</path>
+        </property>
+        <property id="configSUPPORT_STATIC_ALLOCATION">
+            <priorityPath>src/frtos_config/FreeRTOSConfig.h</priorityPath>
+            <path>src/FreeRTOS/Source/include/FreeRTOS.h</path>
+        </property>
+        <property id="configSUPPORT_DYNAMIC_ALLOCATION">
+            <id>configSUPPORT_DYNAMIC_ALLOCATION</id>
+            <priorityPath>src/frtos_config/FreeRTOSConfig.h</priorityPath>
+            <path>src/FreeRTOS/Source/include/FreeRTOS.h</path>
+        </property>
+        <property id="configGENERATE_RUN_TIME_STATS">
+            <priorityPath>src/frtos_config/FreeRTOSConfig.h</priorityPath>
+            <path>src/FreeRTOS/Source/include/FreeRTOS.h</path>
+        </property>
+        <property id="portBYTE_ALIGNMENT">
+            <toolchain>RXC</toolchain>
+            <series>RX100</series>
+            <group>RX130</group>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX100/portmacro.h</path>
+        </property>
+        <property id="portBYTE_ALIGNMENT">
+            <toolchain>RXC</toolchain>
+            <series>RX200</series>
+            <group>RX230</group>
+            <group>RX231</group>
+            <group>RX23W</group>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX200/portmacro.h</path>
+        </property>
+        <property id="portBYTE_ALIGNMENT">
+            <toolchain>RXC</toolchain>
+            <series>RX600</series>
+            <series>RX700</series>
+            <group>RX64M</group>
+            <group>RX651</group>
+            <group>RX65N</group>
+            <group>RX66T</group>
+            <group>RX66N</group>
+            <group>RX71M</group>
+            <group>RX72T</group>
+            <group>RX72N</group>
+            <group>RX72M</group>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX600v2/portmacro.h</path>
+        </property>
+        <property id="portBYTE_ALIGNMENT">
+            <toolchain>GNURX</toolchain>
+            <series>RX100</series>
+            <group>RX130</group>
+            <path>src/FreeRTOS/Source/portable/GCC/RX100/portmacro.h</path>
+        </property>
+        <property id="portBYTE_ALIGNMENT">
+            <toolchain>GNURX</toolchain>
+            <series>RX200</series>
+            <group>RX230</group>
+            <group>RX231</group>
+            <group>RX23W</group>
+            <path>src/FreeRTOS/Source/portable/GCC/RX200/portmacro.h</path>
+        </property>
+        <property id="portBYTE_ALIGNMENT">
+            <toolchain>GNURX</toolchain>
+            <series>RX600</series>
+            <series>RX700</series>
+            <group>RX64M</group>
+            <group>RX651</group>
+            <group>RX65N</group>
+            <group>RX66T</group>
+            <group>RX66N</group>
+            <group>RX71M</group>
+            <group>RX72T</group>
+            <group>RX72N</group>
+            <group>RX72M</group>
+            <path>src/FreeRTOS/Source/portable/GCC/RX600v2/portmacro.h</path>
+        </property>
+        <property id="portBYTE_ALIGNMENT_MASK">
+            <path>src/FreeRTOS/Source/include/portable.h</path>
+            <dependency>portBYTE_ALIGNMENT</dependency>
+        </property>
+        <property id="configMINIMAL_STACK_SIZE">
+            <path>src/frtos_config/FreeRTOSConfig.h</path>
+        </property>
+        <property id="configTIMER_TASK_STACK_DEPTH">
+            <path>src/frtos_config/FreeRTOSConfig.h</path>
+        </property>
+        <property id="configTIMER_QUEUE_LENGTH">
+            <path>src/frtos_config/FreeRTOSConfig.h</path>
+        </property>
+        <property id="configUSE_TIMERS">
+            <path>src/frtos_config/FreeRTOSConfig.h</path>
+        </property>
+        <controlBlock id="TaskControlBlock" value="72">
+            <addition>
+                <condition>(${configUSE_TRACE_FACILITY} &gt; 0)</condition>
+                <additionalValue>8</additionalValue>
+            </addition>
+            <addition>
+                <condition>(${configUSE_MUTEXES} &gt; 0)</condition>
+                <additionalValue>8</additionalValue>
+            </addition>
+            <addition>
+                <condition>(${configUSE_APPLICATION_TASK_TAG} &gt; 0)</condition>
+                <additionalValue>4</additionalValue>
+            </addition>
+            <addition>
+                <condition>(${configRECORD_STACK_HIGH_ADDRESS} &gt; 0)</condition>
+                <additionalValue>4</additionalValue>
+            </addition>
+            <addition>
+                <condition>(1 == 1)</condition>
+                <additionalValue>${configNUM_THREAD_LOCAL_STORAGE_POINTERS}*4</additionalValue>
+            </addition>
+            <addition>
+                <condition>(${configUSE_TASK_NOTIFICATIONS} &gt; 0)</condition>
+                <additionalValue>4</additionalValue>
+            </addition>
+            <addition>
+                <condition>(${configGENERATE_RUN_TIME_STATS} &gt; 0)</condition>
+                <additionalValue>4</additionalValue>
+            </addition>
+        </controlBlock>
+        <controlBlock id="QueueControlBlock" value="72">
+            <addition>
+                <condition>(${configUSE_TRACE_FACILITY} &gt; 0)</condition>
+                <additionalValue>8</additionalValue>
+            </addition>
+            <addition>
+                <condition>(${configUSE_QUEUE_SETS} &gt; 0)</condition>
+                <additionalValue>4</additionalValue>
+            </addition>
+        </controlBlock>
+        <controlBlock id="SemaphoreControlBlock" value="72">
+            <addition>
+                <condition>(${configUSE_TRACE_FACILITY} &gt; 0)</condition>
+                <additionalValue>8</additionalValue>
+            </addition>
+            <addition>
+                <condition>(${configUSE_QUEUE_SETS} &gt; 0)</condition>
+                <additionalValue>4</additionalValue>
+            </addition>
+        </controlBlock>
+        <controlBlock id="StreamBufferControlBlock" value="40">
+            <addition>
+                <condition>(${configUSE_TRACE_FACILITY} &gt; 0)</condition>
+                <additionalValue>4</additionalValue>
+            </addition>
+        </controlBlock>
+        <controlBlock id="MessageBufferControlBlock" value="32">
+            <addition>
+                <condition>(${configUSE_TRACE_FACILITY} &gt; 0)</condition>
+                <additionalValue>4</additionalValue>
+            </addition>
+        </controlBlock>
+        <controlBlock id="SoftwareTimerControlBlock" value="40">
+            <addition>
+                <condition>(${configUSE_TRACE_FACILITY} &gt; 0)</condition>
+                <additionalValue>4</additionalValue>
+            </addition>
+            <addition>
+                <condition>((${configSUPPORT_STATIC_ALLOCATION} == 1) &amp;&amp; (${configSUPPORT_DYNAMIC_ALLOCATION} == 1))</condition>
+                <additionalValue>4</additionalValue>
+            </addition>
+        </controlBlock>
+        <controlBlock id="EventGroupControlBlock" value="24">
+            <addition>
+                <condition>(${configUSE_TRACE_FACILITY} &gt; 0)</condition>
+                <additionalValue>4</additionalValue>
+            </addition>
+            <addition>
+                <condition>((${configSUPPORT_STATIC_ALLOCATION} == 1) &amp;&amp; (${configSUPPORT_DYNAMIC_ALLOCATION} == 1))</condition>
+                <additionalValue>4</additionalValue>
+            </addition>
+        </controlBlock>
+        <defineValue id="initHeap1" value="10" />
+        <defineValue id="initHeap2" value="8" />
+        <defineValue id="initHeap4" value="16" />
+        <defineValue id="xBlockAllocatedBit" value="0" />
+        <defineValue id="sizeOfBlockLink" value="8" />
+        <defineValue id="sizeof(uint32_t)" value="4" />
+        <kernelPredefineObject id="MAIN_TASK" display="Main Task" type="TASK">
+            <data>512</data>
+            <enableCondition>true</enableCondition>
+        </kernelPredefineObject>
+        <kernelPredefineObject id="IDLE_TASK" display="IDLE Task" type="TASK">
+            <data>${configMINIMAL_STACK_SIZE}</data>
+            <enableCondition>((${configSUPPORT_DYNAMIC_ALLOCATION} &amp; ${configSUPPORT_STATIC_ALLOCATION}) != 1 )</enableCondition>
+        </kernelPredefineObject>
+        <kernelPredefineObject id="TMR_SVC_TASK" display="Timer Service Task" type="TASK">
+            <data>${configTIMER_TASK_STACK_DEPTH}</data>
+            <enableCondition>(((${configSUPPORT_DYNAMIC_ALLOCATION} &amp; ${configSUPPORT_STATIC_ALLOCATION}) != 1 ) &amp;&amp; (${configUSE_TIMERS} != 0))</enableCondition>
+        </kernelPredefineObject>
+        <kernelPredefineObject id="DEFAULT_QUEUE" display="Timer Queue" type="QUEUE">
+            <!-- (configTIMER_QUEUE_LENGTH) items with sizeof(DaemonTaskMessage_t)=16 bytes each item -->
+            <data>${configTIMER_QUEUE_LENGTH}*16</data>
+            <enableCondition>(((${configSUPPORT_DYNAMIC_ALLOCATION} &amp; ${configSUPPORT_STATIC_ALLOCATION}) != 1 ) &amp;&amp; (${configUSE_TIMERS} != 0))</enableCondition>
+        </kernelPredefineObject>
+    </heap>
+</refinfo>
