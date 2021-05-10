@@ -34,7 +34,7 @@
         <group>RX72M</group>
         <board>RSKRX64M</board>
         <board>RSKRX65N</board>
-        <board>RSKRX65N_2MB</board>
+        <board>RSKRX65N-2MB</board>
         <board>RSKRX66T</board>
         <board>RSKRX66N</board>
         <board>RSKRX71M</board>
@@ -64,7 +64,7 @@
         <group>RX72M</group>
         <board>RSKRX64M</board>
         <board>RSKRX65N</board>
-        <board>RSKRX65N_2MB</board>
+        <board>RSKRX65N-2MB</board>
         <board>RSKRX66T</board>
         <board>RSKRX66N</board>
         <board>RSKRX71M</board>
@@ -76,16 +76,8 @@
     <!-- multiple dependencies, applications, functions, and incdirs permitted -->
     <package>
         <type>rtosmodule</type>
-        <name>FreeRTOS</name>
+        <name>FreeRTOSKernel</name>
         <version>10.4.3-rx-1.0.0</version>
-        <application>RTOS</application>
-        <desc>FreeRTOS kernel for real-time multitasking</desc>
-        <details>This module provides priority-based preemptive RTOS scheduler.</details>
-        <function>RTOS</function>
-        <dependency>
-            <module>r_bsp</module>
-            <version>3.80</version>
-        </dependency>
         <!-- include path setting -->
         <incdir>
             <path>src/FreeRTOS/Source/include</path>
