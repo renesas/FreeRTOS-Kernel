@@ -77,7 +77,7 @@
     <package>
         <type>rtosmodule</type>
         <name>FreeRTOSKernel</name>
-        <version>10.4.3-rx-1.0.0</version>
+        <version>10.4.3-rx-1.0.1</version>
         <!-- include path setting -->
         <incdir>
             <path>src/FreeRTOS/Source/include</path>
@@ -250,6 +250,12 @@
             <file>portable/readme.txt</file>
             <path>src/FreeRTOS/Source/portable</path>
         </impdir>
+        <excludebuild>
+            <path>src/FreeRTOS/Source/portable/MemMang/heap_1.c</path>
+            <path>src/FreeRTOS/Source/portable/MemMang/heap_2.c</path>
+            <path>src/FreeRTOS/Source/portable/MemMang/heap_3.c</path>
+            <path>src/FreeRTOS/Source/portable/MemMang/heap_5.c</path>
+        </excludebuild>
     </package>
     <!-- Heap Information. The purpose is to provide information to estimate Heap Size -->
     <!-- The redundant zero number before a numerical data may cause it to be wrong, because some numerical data are input of an javascript engine -->
