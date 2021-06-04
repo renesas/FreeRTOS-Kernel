@@ -99,6 +99,7 @@
         <incdir>
             <toolchain>GNURX</toolchain>
             <series>RX600</series>
+            <series>RX700</series>
             <group>RX64M</group>
             <group>RX651</group>
             <group>RX65N</group>
@@ -127,6 +128,7 @@
         <incdir>
             <toolchain>RXC</toolchain>
             <series>RX600</series>
+            <series>RX700</series>
             <group>RX64M</group>
             <group>RX651</group>
             <group>RX65N</group>
@@ -256,6 +258,21 @@
             <path>src/FreeRTOS/Source/portable/MemMang/heap_3.c</path>
             <path>src/FreeRTOS/Source/portable/MemMang/heap_5.c</path>
         </excludebuild>
+        <!-- patch_files -->
+        <impdir>
+            <toolchain>RXC</toolchain>
+            <group>RX130</group>
+            <file>configuration/patch_files/portable/Renesas/RX100/port.c</file>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX100</path>
+        </impdir>
+        <impdir>
+            <toolchain>RXC</toolchain>
+            <group>RX230</group>
+            <group>RX231</group>
+            <group>RX23W</group>
+            <file>configuration/patch_files/portable/Renesas/RX200/port.c</file>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX200</path>
+        </impdir>
     </package>
     <!-- Heap Information. The purpose is to provide information to estimate Heap Size -->
     <!-- The redundant zero number before a numerical data may cause it to be wrong, because some numerical data are input of an javascript engine -->
