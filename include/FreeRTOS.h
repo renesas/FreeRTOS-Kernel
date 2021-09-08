@@ -1298,7 +1298,7 @@ typedef struct xSTATIC_EVENT_GROUP
  */
 typedef struct xSTATIC_TIMER
 {
-    void * pvDummy1;
+    const void * pvDummy1;
     StaticListItem_t xDummy2;
     TickType_t xDummy3;
     void * pvDummy5;
