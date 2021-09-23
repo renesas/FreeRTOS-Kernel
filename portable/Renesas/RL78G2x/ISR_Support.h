@@ -26,8 +26,8 @@
 ; */
 
 ;/* Variables used by scheduler */
-	.EXTERN    _pxCurrentTCB
-	.EXTERN    _usCriticalNesting
+    .EXTERN    _pxCurrentTCB
+    .EXTERN    _usCriticalNesting
 
 ;/*
 ; * portSAVE_CONTEXT MACRO
@@ -36,30 +36,30 @@
 ; * of the active Task onto the task stack
 ; */
 portSAVE_CONTEXT .MACRO
-;	/* Save AX Register to stack. */
-	PUSH	AX
-	PUSH	HL
-;	/* Save CS register. */
-	MOV 	A, CS
-	XCH		A, X
-;	/* Save ES register. */
-	MOV		A, ES
-	PUSH	AX
-;	/* Save the remaining general purpose registers from bank 0. */
-	PUSH	DE
-	PUSH	BC
-;	/* Save the usCriticalNesting value. */
-	MOVW	AX, !_usCriticalNesting
-	PUSH	AX
-;	/* Save the Stack pointer. */
-	MOVW	AX, !_pxCurrentTCB
-	MOVW	HL, AX
-	MOVW	AX, SP
-	MOVW	[HL], AX
-;	/* Switch stack pointers. */
-;	MOVW	SP, #LOWW(__STACK_ADDR_START)
+;   /* Save AX Register to stack. */
+    PUSH    AX
+    PUSH    HL
+;   /* Save CS register. */
+    MOV     A, CS
+    XCH     A, X
+;   /* Save ES register. */
+    MOV     A, ES
+    PUSH    AX
+;   /* Save the remaining general purpose registers from bank 0. */
+    PUSH    DE
+    PUSH    BC
+;   /* Save the usCriticalNesting value. */
+    MOVW    AX, !_usCriticalNesting
+    PUSH    AX
+;   /* Save the Stack pointer. */
+    MOVW    AX, !_pxCurrentTCB
+    MOVW    HL, AX
+    MOVW    AX, SP
+    MOVW    [HL], AX
+;   /* Switch stack pointers. */
+;   MOVW    SP, #LOWW(__STACK_ADDR_START)
 
-	.ENDM
+    .ENDM
 
 
 ;/*
@@ -69,27 +69,27 @@ portSAVE_CONTEXT .MACRO
 ; * of the selected task from the task stack
 ; */
 portRESTORE_CONTEXT .MACRO
-;	/* Restore the Stack pointer. */
-	MOVW	AX, !_pxCurrentTCB
-	MOVW	HL, AX
-	MOVW	AX, [HL]
-	MOVW	SP, AX
-;	/* Restore usCriticalNesting value. */
-	POP		AX
-	MOVW	!_usCriticalNesting, AX
-;	/* Restore the necessary general purpose registers. */
-	POP		BC
-	POP		DE
-;	/* Restore the ES register. */
-	POP		AX
-	MOV		ES, A
-;	/* Restore the CS register. */
-	XCH		A, X
-	MOV		CS, A
-;	/* Restore general purpose register HL. */
-	POP		HL
-;	/* Restore AX. */
-	POP		AX
+;   /* Restore the Stack pointer. */
+    MOVW    AX, !_pxCurrentTCB
+    MOVW    HL, AX
+    MOVW    AX, [HL]
+    MOVW	SP, AX
+;   /* Restore usCriticalNesting value. */
+    POP     AX
+    MOVW    !_usCriticalNesting, AX
+;   /* Restore the necessary general purpose registers. */
+    POP     BC
+    POP     DE
+;   /* Restore the ES register. */
+    POP     AX
+    MOV     ES, A
+;   /* Restore the CS register. */
+    XCH     A, X
+    MOV     CS, A
+;   /* Restore general purpose register HL. */
+    POP     HL
+;   /* Restore AX. */
+    POP     AX
 
-	.ENDM
+    .ENDM
 

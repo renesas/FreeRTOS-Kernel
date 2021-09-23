@@ -38,16 +38,16 @@
 
 /* Initial PSW value allocated to a newly created task.
  *   11000110
- *   ||||||||-------------- Fill byte
- *   |||||||--------------- Carry Flag cleared
- *   |||||----------------- In-service priority Flags set to low level
+ *   ||||||||-------------- Carry Flag Cleared
+ *   |||||||--------------- In-service priority Flags set to low level (ISP0)
+ *   |||||----------------- In-service priority Flags set to low level (ISP1)
  *   ||||------------------ Register bank Select 0 Flag cleared
  *   |||------------------- Auxiliary Carry Flag cleared
  *   ||-------------------- Register bank Select 1 Flag cleared
  *   |--------------------- Zero Flag set
  *   ---------------------- Global Interrupt Flag set (enabled)
  */
-#define portPSW		  ( 0xc6UL )
+#define portPSW       ( 0xc6UL )
 
 /* Each task maintains a count of the critical section nesting depth.  Each time
  a critical section is entered the count is incremented.  Each time a critical
