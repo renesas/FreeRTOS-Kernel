@@ -98,7 +98,7 @@
             <group>RX230</group>
             <group>RX231</group>
             <group>RX23W</group>
-            <path>src/FreeRTOS/Source/portable/GCC/RX200</path>
+            <path>src/FreeRTOS/Source/portable/GCC/RX600v2</path>
         </incdir>
         <incdir>
             <toolchain>GNURX</toolchain>
@@ -108,13 +108,19 @@
             <group>RX651</group>
             <group>RX65N</group>
             <group>RX66T</group>
-            <group>RX66N</group>
-            <group>RX671</group>
             <group>RX71M</group>
             <group>RX72T</group>
+            <path>src/FreeRTOS/Source/portable/GCC/RX600v2</path>
+        </incdir>
+        <incdir>
+            <toolchain>GNURX</toolchain>
+            <series>RX600</series>
+            <series>RX700</series>
+            <group>RX66N</group>
+            <group>RX671</group>
             <group>RX72N</group>
             <group>RX72M</group>
-            <path>src/FreeRTOS/Source/portable/GCC/RX600v2</path>
+            <path>src/FreeRTOS/Source/portable/GCC/RX700v3_DPFPU</path>
         </incdir>
         <incdir>
             <toolchain>RXC</toolchain>
@@ -128,7 +134,7 @@
             <group>RX230</group>
             <group>RX231</group>
             <group>RX23W</group>
-            <path>src/FreeRTOS/Source/portable/Renesas/RX200</path>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX600v2</path>
         </incdir>
         <incdir>
             <toolchain>RXC</toolchain>
@@ -138,13 +144,19 @@
             <group>RX651</group>
             <group>RX65N</group>
             <group>RX66T</group>
-            <group>RX66N</group>
-            <group>RX671</group>
             <group>RX71M</group>
             <group>RX72T</group>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX600v2</path>
+        </incdir>
+        <incdir>
+            <toolchain>RXC</toolchain>
+            <series>RX600</series>
+            <series>RX700</series>
+            <group>RX66N</group>
+            <group>RX671</group>
             <group>RX72N</group>
             <group>RX72M</group>
-            <path>src/FreeRTOS/Source/portable/Renesas/RX600v2</path>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX700v3_DPFPU</path>
         </incdir>
         <incdir>
             <path>src/frtos_startup</path>
@@ -209,8 +221,8 @@
             <group>RX230</group>
             <group>RX231</group>
             <group>RX23W</group>
-            <folder>portable/Renesas/RX200</folder>
-            <path>src/FreeRTOS/Source/portable/Renesas/RX200</path>
+            <folder>portable/Renesas/RX600v2</folder>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX600v2</path>
         </impdir>
         <impdir>
             <toolchain>RXC</toolchain>
@@ -218,14 +230,19 @@
             <group>RX651</group>
             <group>RX65N</group>
             <group>RX66T</group>
-            <group>RX66N</group>
-            <group>RX671</group>
             <group>RX71M</group>
             <group>RX72T</group>
-            <group>RX72N</group>
-            <group>RX72M</group>
             <folder>portable/Renesas/RX600v2</folder>
             <path>src/FreeRTOS/Source/portable/Renesas/RX600v2</path>
+        </impdir>
+        <impdir>
+            <toolchain>RXC</toolchain>
+            <group>RX66N</group>
+            <group>RX671</group>
+            <group>RX72N</group>
+            <group>RX72M</group>
+            <folder>portable/Renesas/RX700v3_DPFPU</folder>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX700v3_DPFPU</path>
         </impdir>
         <impdir>
             <toolchain>GNURX</toolchain>
@@ -238,8 +255,8 @@
             <group>RX230</group>
             <group>RX231</group>
             <group>RX23W</group>
-            <folder>portable/GCC/RX200</folder>
-            <path>src/FreeRTOS/Source/portable/GCC/RX200</path>
+            <folder>portable/GCC/RX600v2</folder>
+            <path>src/FreeRTOS/Source/portable/GCC/RX600v2</path>
         </impdir>
         <impdir>
             <toolchain>GNURX</toolchain>
@@ -247,14 +264,19 @@
             <group>RX651</group>
             <group>RX65N</group>
             <group>RX66T</group>
-            <group>RX66N</group>
-            <group>RX671</group>
             <group>RX71M</group>
             <group>RX72T</group>
-            <group>RX72N</group>
-            <group>RX72M</group>
             <folder>portable/GCC/RX600v2</folder>
             <path>src/FreeRTOS/Source/portable/GCC/RX600v2</path>
+        </impdir>
+        <impdir>
+            <toolchain>GNURX</toolchain>
+            <group>RX66N</group>
+            <group>RX671</group>
+            <group>RX72N</group>
+            <group>RX72M</group>
+            <folder>portable/GCC/RX700v3_DPFPU</folder>
+            <path>src/FreeRTOS/Source/portable/GCC/RX700v3_DPFPU</path>
         </impdir>
         <impdir>
             <file>portable/readme.txt</file>
@@ -272,14 +294,6 @@
             <group>RX130</group>
             <file>configuration/patch_files/portable/Renesas/RX100/port.c</file>
             <path>src/FreeRTOS/Source/portable/Renesas/RX100</path>
-        </impdir>
-        <impdir>
-            <toolchain>RXC</toolchain>
-            <group>RX230</group>
-            <group>RX231</group>
-            <group>RX23W</group>
-            <file>configuration/patch_files/portable/Renesas/RX200/port.c</file>
-            <path>src/FreeRTOS/Source/portable/Renesas/RX200</path>
         </impdir>
     </package>
     <!-- Heap Information. The purpose is to provide information to estimate Heap Size -->
@@ -335,7 +349,7 @@
             <group>RX230</group>
             <group>RX231</group>
             <group>RX23W</group>
-            <path>src/FreeRTOS/Source/portable/Renesas/RX200/portmacro.h</path>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX600v2/portmacro.h</path>
         </property>
         <property id="portBYTE_ALIGNMENT">
             <toolchain>RXC</toolchain>
@@ -345,13 +359,19 @@
             <group>RX651</group>
             <group>RX65N</group>
             <group>RX66T</group>
-            <group>RX66N</group>
-            <group>RX671</group>
             <group>RX71M</group>
             <group>RX72T</group>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX600v2/portmacro.h</path>
+        </property>
+        <property id="portBYTE_ALIGNMENT">
+            <toolchain>RXC</toolchain>
+            <series>RX600</series>
+            <series>RX700</series>
+            <group>RX66N</group>
+            <group>RX671</group>
             <group>RX72N</group>
             <group>RX72M</group>
-            <path>src/FreeRTOS/Source/portable/Renesas/RX600v2/portmacro.h</path>
+            <path>src/FreeRTOS/Source/portable/Renesas/RX700v3_DPFPU/portmacro.h</path>
         </property>
         <property id="portBYTE_ALIGNMENT">
             <toolchain>GNURX</toolchain>
@@ -365,7 +385,7 @@
             <group>RX230</group>
             <group>RX231</group>
             <group>RX23W</group>
-            <path>src/FreeRTOS/Source/portable/GCC/RX200/portmacro.h</path>
+            <path>src/FreeRTOS/Source/portable/GCC/RX600v2/portmacro.h</path>
         </property>
         <property id="portBYTE_ALIGNMENT">
             <toolchain>GNURX</toolchain>
@@ -375,13 +395,19 @@
             <group>RX651</group>
             <group>RX65N</group>
             <group>RX66T</group>
-            <group>RX66N</group>
-            <group>RX671</group>
             <group>RX71M</group>
             <group>RX72T</group>
+            <path>src/FreeRTOS/Source/portable/GCC/RX600v2/portmacro.h</path>
+        </property>
+        <property id="portBYTE_ALIGNMENT">
+            <toolchain>GNURX</toolchain>
+            <series>RX600</series>
+            <series>RX700</series>
+            <group>RX66N</group>
+            <group>RX671</group>
             <group>RX72N</group>
             <group>RX72M</group>
-            <path>src/FreeRTOS/Source/portable/GCC/RX600v2/portmacro.h</path>
+            <path>src/FreeRTOS/Source/portable/GCC/RX700v3_DPFPU/portmacro.h</path>
         </property>
         <property id="portBYTE_ALIGNMENT_MASK">
             <path>src/FreeRTOS/Source/include/portable.h</path>
