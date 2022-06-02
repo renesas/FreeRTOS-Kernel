@@ -20,9 +20,11 @@
         <series>RX600</series>
         <series>RX700</series>
         <group>RX130</group>
+        <group>RX140</group>
         <group>RX230</group>
         <group>RX231</group>
         <group>RX23W</group>
+        <group>RX23E-A</group>
         <group>RX64M</group>
         <group>RX651</group>
         <group>RX65N</group>
@@ -52,9 +54,11 @@
         <series>RX600</series>
         <series>RX700</series>
         <group>RX130</group>
+        <group>RX140</group>
         <group>RX230</group>
         <group>RX231</group>
         <group>RX23W</group>
+        <group>RX23E-A</group>
         <group>RX64M</group>
         <group>RX651</group>
         <group>RX65N</group>
@@ -81,7 +85,7 @@
     <package>
         <type>rtosmodule</type>
         <name>FreeRTOSKernel</name>
-        <version>10.4.3-rx-1.0.3</version>
+        <version>10.4.3-rx-1.0.4</version>
         <!-- include path setting -->
         <incdir>
             <path>src/FreeRTOS/Source/include</path>
@@ -94,10 +98,13 @@
         </incdir>
         <incdir>
             <toolchain>GNURX</toolchain>
+            <series>RX100</series>
             <series>RX200</series>
+            <group>RX140</group>
             <group>RX230</group>
             <group>RX231</group>
             <group>RX23W</group>
+            <group>RX23E-A</group>
             <path>src/FreeRTOS/Source/portable/GCC/RX600v2</path>
         </incdir>
         <incdir>
@@ -130,10 +137,13 @@
         </incdir>
         <incdir>
             <toolchain>RXC</toolchain>
+            <series>RX100</series>
             <series>RX200</series>
+            <group>RX140</group>
             <group>RX230</group>
             <group>RX231</group>
             <group>RX23W</group>
+            <group>RX23E-A</group>
             <path>src/FreeRTOS/Source/portable/Renesas/RX600v2</path>
         </incdir>
         <incdir>
@@ -218,9 +228,11 @@
         </impdir>
         <impdir>
             <toolchain>RXC</toolchain>
+            <group>RX140</group>
             <group>RX230</group>
             <group>RX231</group>
             <group>RX23W</group>
+            <group>RX23E-A</group>
             <folder>portable/Renesas/RX600v2</folder>
             <path>src/FreeRTOS/Source/portable/Renesas/RX600v2</path>
         </impdir>
@@ -252,9 +264,11 @@
         </impdir>
         <impdir>
             <toolchain>GNURX</toolchain>
+            <group>RX140</group>
             <group>RX230</group>
             <group>RX231</group>
             <group>RX23W</group>
+            <group>RX23E-A</group>
             <folder>portable/GCC/RX600v2</folder>
             <path>src/FreeRTOS/Source/portable/GCC/RX600v2</path>
         </impdir>
@@ -345,10 +359,13 @@
         </property>
         <property id="portBYTE_ALIGNMENT">
             <toolchain>RXC</toolchain>
+            <series>RX100</series>
             <series>RX200</series>
+            <group>RX140</group>
             <group>RX230</group>
             <group>RX231</group>
             <group>RX23W</group>
+            <group>RX23E-A</group>
             <path>src/FreeRTOS/Source/portable/Renesas/RX600v2/portmacro.h</path>
         </property>
         <property id="portBYTE_ALIGNMENT">
@@ -381,10 +398,13 @@
         </property>
         <property id="portBYTE_ALIGNMENT">
             <toolchain>GNURX</toolchain>
+            <series>RX100</series>
             <series>RX200</series>
+            <group>RX140</group>
             <group>RX230</group>
             <group>RX231</group>
             <group>RX23W</group>
+            <group>RX23E-A</group>
             <path>src/FreeRTOS/Source/portable/GCC/RX600v2/portmacro.h</path>
         </property>
         <property id="portBYTE_ALIGNMENT">
