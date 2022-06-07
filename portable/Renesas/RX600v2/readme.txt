@@ -10,6 +10,7 @@ RX111           RXv1    No          ---         Renesas/RX100 (*1,*2)   GCC/RX10
 RX113           RXv1    No          ---         Renesas/RX100 (*1,*2)   GCC/RX100 (*1,*2)   IAR/RX100 (*1,*2)
 RX130           RXv1    No          ---         Renesas/RX100 (*1,*2)   GCC/RX100 (*1,*2)   IAR/RX100 (*1,*2)
 RX13T           RXv1    Yes         ---         Renesas/RX600           GCC/RX600           IAR/RX600
+RX140           RXv2    Yes         ---         Renesas/RX600v2         GCC/RX600v2         IAR/RXv2
 
 RX210           RXv1    No          ---         Renesas/RX200 (*3)      N/A (*3)            N/A (*3)
 RX21A           RXv1    No          ---         Renesas/RX200 (*3)      N/A (*3)            N/A (*3)
