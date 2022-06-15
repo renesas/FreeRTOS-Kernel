@@ -1978,7 +1978,7 @@ static void prvAddNewTaskToReadyList( TCB_t * pxNewTCB )
                     /* The delayed or ready lists cannot be accessed so the task
                      * is held in the pending ready list until the scheduler is
                      * unsuspended. */
-                    vListInsertEnd( &( xPendingReadyList ), &( pxTCB->xEventListItem ) );
+                    vListInsertEnd( (List_t *)&( xPendingReadyList ), &( pxTCB->xEventListItem ) );
                 }
             }
             else
@@ -3225,7 +3225,7 @@ BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList )
     {
         /* The delayed and ready lists cannot be accessed, so hold this task
          * pending until the scheduler is resumed. */
-        listINSERT_END( &( xPendingReadyList ), &( pxUnblockedTCB->xEventListItem ) );
+        listINSERT_END((List_t *) &( xPendingReadyList ), &( pxUnblockedTCB->xEventListItem ) );
     }
 
     if( pxUnblockedTCB->uxPriority > pxCurrentTCB->uxPriority )
@@ -3674,7 +3674,7 @@ static void prvInitialiseTaskLists( void )
 
     vListInitialise( &xDelayedTaskList1 );
     vListInitialise( &xDelayedTaskList2 );
-    vListInitialise( &xPendingReadyList );
+    vListInitialise( (List_t *)&xPendingReadyList );
 
     #if ( INCLUDE_vTaskDelete == 1 )
         {
@@ -5088,7 +5088,7 @@ TickType_t uxTaskResetEventItemValue( void )
                 {
                     /* The delayed and ready lists cannot be accessed, so hold
                      * this task pending until the scheduler is resumed. */
-                    listINSERT_END( &( xPendingReadyList ), &( pxTCB->xEventListItem ) );
+                    listINSERT_END( (List_t *)&( xPendingReadyList ), &( pxTCB->xEventListItem ) );
                 }
 
                 if( pxTCB->uxPriority > pxCurrentTCB->uxPriority )
@@ -5179,7 +5179,7 @@ TickType_t uxTaskResetEventItemValue( void )
                 {
                     /* The delayed and ready lists cannot be accessed, so hold
                      * this task pending until the scheduler is resumed. */
-                    listINSERT_END( &( xPendingReadyList ), &( pxTCB->xEventListItem ) );
+                    listINSERT_END( (List_t *)&( xPendingReadyList ), &( pxTCB->xEventListItem ) );
                 }
 
                 if( pxTCB->uxPriority > pxCurrentTCB->uxPriority )
