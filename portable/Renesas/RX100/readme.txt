@@ -30,6 +30,7 @@ RX63N,RX631     RXv1    Yes         ---         Renesas/RX600           GCC/RX60
 RX64M           RXv2    Yes         ---         Renesas/RX600v2         GCC/RX600v2         IAR/RXv2
 RX65N,RX651     RXv2    Yes         ---         Renesas/RX600v2         GCC/RX600v2         IAR/RXv2
 RX66N           RXv3    Yes         Yes         Renesas/RX700v3_DPFPU   GCC/RX700v3_DPFPU   IAR/RX700v3_DPFPU
+RX660           RXv3    Yes         No          Renesas/RX600v2 (*5)    GCC/RX600v2 (*5)    IAR/RXv2 (*5)
 RX62T           RXv1    Yes         ---         Renesas/RX600           GCC/RX600           IAR/RX600
 RX62G           RXv1    Yes         ---         Renesas/RX600           GCC/RX600           IAR/RX600
 RX63T           RXv1    Yes         ---         Renesas/RX600           GCC/RX600           IAR/RX600
