@@ -28,6 +28,7 @@
         <group>RX231</group>
         <group>RX23W</group>
         <group>RX23E-A</group>
+        <group>RX23E-B</group>
         <group>RX24T</group>
         <group>RX26T</group>
         <group>RX64M</group>
@@ -65,6 +66,7 @@
         <group>RX231</group>
         <group>RX23W</group>
         <group>RX23E-A</group>
+        <group>RX23E-B</group>
         <group>RX24T</group>
         <group>RX26T</group>
         <group>RX64M</group>
@@ -94,7 +96,7 @@
     <package>
         <type>rtosmodule</type>
         <name>FreeRTOSKernel</name>
-        <version>10.4.3-rx-1.0.7</version>
+        <version>10.4.3-rx-1.0.8</version>
         <!-- include path setting -->
         <incdir>
             <path>src/FreeRTOS/Source/include</path>
@@ -114,6 +116,7 @@
             <group>RX231</group>
             <group>RX23W</group>
             <group>RX23E-A</group>
+            <group>RX23E-B</group>
             <group>RX24T</group>
             <group>RX26T</group>
             <path>src/FreeRTOS/Source/portable/GCC/RX600v2</path>
@@ -156,6 +159,7 @@
             <group>RX231</group>
             <group>RX23W</group>
             <group>RX23E-A</group>
+            <group>RX23E-B</group>
             <group>RX24T</group>
             <group>RX26T</group>
             <path>src/FreeRTOS/Source/portable/Renesas/RX600v2</path>
@@ -248,6 +252,7 @@
             <group>RX231</group>
             <group>RX23W</group>
             <group>RX23E-A</group>
+            <group>RX23E-B</group>
             <group>RX24T</group>
             <group>RX26T</group>
             <folder>portable/Renesas/RX600v2</folder>
@@ -287,6 +292,7 @@
             <group>RX231</group>
             <group>RX23W</group>
             <group>RX23E-A</group>
+            <group>RX23E-B</group>
             <group>RX24T</group>
             <group>RX26T</group>
             <folder>portable/GCC/RX600v2</folder>
@@ -387,6 +393,7 @@
             <group>RX231</group>
             <group>RX23W</group>
             <group>RX23E-A</group>
+            <group>RX23E-B</group>
             <group>RX24T</group>
             <group>RX26T</group>
             <path>src/FreeRTOS/Source/portable/Renesas/RX600v2/portmacro.h</path>
@@ -429,6 +436,7 @@
             <group>RX231</group>
             <group>RX23W</group>
             <group>RX23E-A</group>
+            <group>RX23E-B</group>
             <group>RX24T</group>
             <group>RX26T</group>
             <path>src/FreeRTOS/Source/portable/GCC/RX600v2/portmacro.h</path>

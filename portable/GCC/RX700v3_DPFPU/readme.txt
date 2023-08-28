@@ -17,6 +17,7 @@ RX21A           RXv1    No          ---         Renesas/RX200 (*3)      N/A (*3)
 RX220           RXv1    No          ---         Renesas/RX200 (*3)      N/A (*3)            N/A (*3)
 RX230,RX231     RXv2    Yes         ---         Renesas/RX600v2         GCC/RX600v2         IAR/RXv2
 RX23E-A         RXv2    Yes         ---         Renesas/RX600v2         GCC/RX600v2         IAR/RXv2
+RX23E-B         RXv2    Yes         ---         Renesas/RX600v2         GCC/RX600v2         IAR/RXv2
 RX23W           RXv2    Yes         ---         Renesas/RX600v2         GCC/RX600v2         IAR/RXv2
 RX23T           RXv2    Yes         ---         Renesas/RX600v2         GCC/RX600v2         IAR/RXv2
 RX24T           RXv2    Yes         ---         Renesas/RX600v2         GCC/RX600v2         IAR/RXv2
