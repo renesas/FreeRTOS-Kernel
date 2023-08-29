@@ -149,10 +149,18 @@
     #define portEXIT_CRITICAL()     vTaskExitCritical()
 
 /* As this port allows interrupt nesting... */
-    uint32_t ulPortGetIPL( void ) __attribute__( ( naked ) );
-    void vPortSetIPL( uint32_t ulNewIPL ) __attribute__( ( naked ) );
-    #define portSET_INTERRUPT_MASK_FROM_ISR()                              ulPortGetIPL(); portDISABLE_INTERRUPTS()
-    #define portCLEAR_INTERRUPT_MASK_FROM_ISR( uxSavedInterruptStatus )    vPortSetIPL( uxSavedInterruptStatus )
+uint32_t ulPortGetIPL( void ) __attribute__((naked));
+void vPortSetIPL( uint32_t ulNewIPL ) __attribute__((naked));
+
+ static int32_t set_interrupt_mask_from_isr( void );
+ static int32_t set_interrupt_mask_from_isr( void )
+ {
+	 int32_t tmp = ulPortGetIPL();
+	 vPortSetIPL( ( long ) configMAX_SYSCALL_INTERRUPT_PRIORITY );
+	 return tmp;
+ }
+ #define portSET_INTERRUPT_MASK_FROM_ISR()    set_interrupt_mask_from_isr()
+ #define portCLEAR_INTERRUPT_MASK_FROM_ISR( uxSavedInterruptStatus )    vPortSetIPL( ( long ) uxSavedInterruptStatus )
 
 /*-----------------------------------------------------------*/
 
