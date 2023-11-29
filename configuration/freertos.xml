@@ -336,6 +336,9 @@
             <file>configuration/patch_files/portable/Renesas/RX100/port.c</file>
             <path>src/FreeRTOS/Source/portable/Renesas/RX100</path>
         </impdir>
+	<scfgtemplate>
+	    <path>configuration/patch_files/common_scfg.ftl</path>
+	</scfgtemplate>
     </package>
     <!-- Heap Information. The purpose is to provide information to estimate Heap Size -->
     <!-- The redundant zero number before a numerical data may cause it to be wrong, because some numerical data are input of an javascript engine -->
