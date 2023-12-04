@@ -96,7 +96,7 @@
     <package>
         <type>rtosmodule</type>
         <name>FreeRTOSKernel</name>
-        <version>10.4.3-rx-1.0.8</version>
+        <version>10.4.3-rx-1.0.9</version>
         <!-- include path setting -->
         <incdir>
             <path>src/FreeRTOS/Source/include</path>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <smc>
     <general version="2.0.0.0">
-        <configuration active="true" id="com.renesas.smc.toolchain.rxc.configuration.release">
+        <configuration active="true" id="${configurationTypeReleaseID}">
             <property id="com.renesas.smc.service.project.buildArtefactType" values="com.renesas.smc.service.project.buildArtefactType.exe"/>
-            <toolchain id="com.renesas.smc.toolchain.rxc.toolchain.rxc">
+            <toolchain id="${toolChainID}">
                 <option id="com.renesas.smc.toolchain.option.language" key="com.renesas.smc.toolchain.option.language.c"/>
                 <option id="com.renesas.smc.toolchain.option.buildArtefactType" key="com.renesas.smc.toolchain.option.buildArtefactType.exe"/>
                 <option id="com.renesas.smc.toolchain.option.rtos" key="com.renesas.smc.toolchain.option.rtos.freertos.kernel">
-                    <item id="com.renesas.smc.toolchain.option.rtos.freertos.kernel" value="10.4.3-rx-1.0.8"/>
+                    <item id="com.renesas.smc.toolchain.option.rtos.freertos.kernel" value="${packageVersion}"/>
                 </option>
                 <option id="com.renesas.smc.toolchain.option.dual" key="com.renesas.smc.toolchain.option.dual.false"/>
             </toolchain>
