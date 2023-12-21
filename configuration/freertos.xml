@@ -96,7 +96,7 @@
     <package>
         <type>rtosmodule</type>
         <name>FreeRTOSKernel</name>
-        <version>10.4.3-rx-1.0.8</version>
+        <version>10.4.3-rx-1.0.9</version>
         <!-- include path setting -->
         <incdir>
             <path>src/FreeRTOS/Source/include</path>
@@ -336,6 +336,9 @@
             <file>configuration/patch_files/portable/Renesas/RX100/port.c</file>
             <path>src/FreeRTOS/Source/portable/Renesas/RX100</path>
         </impdir>
+	<scfgtemplate>
+	    <path>configuration/patch_files/common_scfg.ftl</path>
+	</scfgtemplate>
     </package>
     <!-- Heap Information. The purpose is to provide information to estimate Heap Size -->
     <!-- The redundant zero number before a numerical data may cause it to be wrong, because some numerical data are input of an javascript engine -->
