@@ -337,7 +337,30 @@
             <path>src/FreeRTOS/Source/portable/Renesas/RX100</path>
         </impdir>
 	<scfgtemplate>
+        <group>RX130</group>
+        <group>RX140</group>
+        <group>RX230</group>
+        <group>RX231</group>
+        <group>RX23W</group>
+        <group>RX23E-A</group>
+        <group>RX23E-B</group>
+        <group>RX24T</group>
+        <group>RX26T</group>
+        <group>RX64M</group>
+        <group>RX651</group>
+        <group>RX65N</group>
+        <group>RX66T</group>
+        <group>RX660</group>
+        <group>RX671</group>
+        <group>RX71M</group>
+        <group>RX72T</group>
 	    <path>configuration/patch_files/common_scfg.ftl</path>
+	</scfgtemplate>
+	<scfgtemplate>
+        <group>RX66N</group>
+        <group>RX72M</group>
+        <group>RX72N</group>
+	    <path>configuration/patch_files/RXv3/rxv3_scfg.ftl</path>
 	</scfgtemplate>
     </package>
     <!-- Heap Information. The purpose is to provide information to estimate Heap Size -->
