@@ -362,6 +362,22 @@
         <group>RX72N</group>
 	    <path>configuration/patch_files/RXv3/rxv3_scfg.ftl</path>
 	</scfgtemplate>
+    <additionaloption>
+        <toolchain>GNURX</toolchain>
+        <group>RX66N</group>
+        <group>RX72M</group>
+        <group>RX72N</group>
+        <optionid>com.renesas.cdt.managedbuild.gcc.core.option.cpu.64bitdouble</optionid>
+        <value>true</value>
+    </additionaloption>
+    <additionaloption>
+        <toolchain>GNURX</toolchain>
+        <group>RX66N</group>
+        <group>RX72M</group>
+        <group>RX72N</group>
+        <optionid>com.renesas.cdt.managedbuild.gcc.core.option.cpu.doubleFPU</optionid>
+        <value>true</value>
+    </additionaloption>
     </package>
     <!-- Heap Information. The purpose is to provide information to estimate Heap Size -->
     <!-- The redundant zero number before a numerical data may cause it to be wrong, because some numerical data are input of an javascript engine -->
