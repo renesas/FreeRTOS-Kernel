@@ -351,13 +351,13 @@
         <group>RX65N</group>
         <group>RX66T</group>
         <group>RX660</group>
-        <group>RX671</group>
         <group>RX71M</group>
         <group>RX72T</group>
 	    <path>configuration/patch_files/common_scfg.ftl</path>
 	</scfgtemplate>
 	<scfgtemplate>
         <group>RX66N</group>
+        <group>RX671</group>
         <group>RX72M</group>
         <group>RX72N</group>
 	    <path>configuration/patch_files/RXv3/rxv3_scfg.ftl</path>
@@ -365,6 +365,7 @@
     <additionaloption>
         <toolchain>GNURX</toolchain>
         <group>RX66N</group>
+        <group>RX671</group>
         <group>RX72M</group>
         <group>RX72N</group>
         <optionid>com.renesas.cdt.managedbuild.gcc.core.option.cpu.64bitdouble</optionid>
@@ -373,6 +374,7 @@
     <additionaloption>
         <toolchain>GNURX</toolchain>
         <group>RX66N</group>
+        <group>RX671</group>
         <group>RX72M</group>
         <group>RX72N</group>
         <optionid>com.renesas.cdt.managedbuild.gcc.core.option.cpu.doubleFPU</optionid>
