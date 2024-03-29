@@ -20,7 +20,9 @@
             <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
         </configuration>
         <configuration enable="true" exclude="false" id="8ccb1927-571f-4edb-b61c-d5beefbf1ab7" inuse="true" name="FreeRTOS_Kernel">
-            <component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of FreeRTOS." detailDescription="" display="FreeRTOS_Kernel" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.kernel" version="1.0.120"/>
+            <component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of FreeRTOS." detailDescription="" display="FreeRTOS_Kernel" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.kernel" version="1.0.130">
+                <gridItem id="configUSE_TASK_DPFPU_SUPPORT" selectedIndex="2"/>
+            </component>
             <source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
         </configuration>
         <configuration enable="true" exclude="false" inuse="true" name="FreeRTOS Object">

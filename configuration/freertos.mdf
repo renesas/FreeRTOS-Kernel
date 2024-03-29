@@ -390,11 +390,13 @@ This is required to ensure flase positive timing errors are not reported.</descr
             <description>Enable: use task notification 
 Disable: do not use task notification</description>
         </property>
-        <property id="configUSE_TASK_DPFPU_SUPPORT" display="Use double-precision floating-point unit (DPFPU) support" default="0" type="checkbox">
-            <option id="configUSE_TASK_DPFPU_SUPPORT.0" display="Disable" value="0"/>
-            <option id="configUSE_TASK_DPFPU_SUPPORT.1" display="Enable" value="1"/>
-            <description>Enable: use task DPFPU support 
-Disable: do not use task DPFPU support</description>
+        <property id="configUSE_TASK_DPFPU_SUPPORT" display="Use double-precision floating-point unit (DPFPU) support" default="0" type="combobox">
+            <option id="configUSE_TASK_DPFPU_SUPPORT.0" display="Disable DPFPU support" value="0"/>
+            <option id="configUSE_TASK_DPFPU_SUPPORT.1" display="Enable or disable DPFPU support for each task" value="1"/>
+            <option id="configUSE_TASK_DPFPU_SUPPORT.2" display="Enable DPFPU support for all tasks" value="2"/>
+            <description>Disable DPFPU support: You can not use DPFPU instructions because all tasks do not have DPFPU context. 
+Enable or disable DPFPU support for each task: A task does not have DPFPU context by default. If enabling DPFPU context in a task, you must call vPortTaskusesDPFPU() in this task before using DPFPU instructions. 
+Enable DPFPU support for all tasks: All tasks have DPFPU context by default.</description>
         </property>
         <property id="configRECORD_STACK_HIGH_ADDRESS" display="Record stack high address" default="0" type="checkbox">
             <option id="configRECORD_STACK_HIGH_ADDRESS.0" display="Disable" value="0"/>
