@@ -31,6 +31,8 @@
         <group>RX23E-B</group>
         <group>RX24T</group>
         <group>RX26T</group>
+        <group>RX260</group>
+        <group>RX261</group>
         <group>RX64M</group>
         <group>RX651</group>
         <group>RX65N</group>
@@ -69,6 +71,8 @@
         <group>RX23E-B</group>
         <group>RX24T</group>
         <group>RX26T</group>
+        <group>RX260</group>
+        <group>RX261</group>
         <group>RX64M</group>
         <group>RX651</group>
         <group>RX65N</group>
@@ -96,7 +100,7 @@
     <package>
         <type>rtosmodule</type>
         <name>FreeRTOSKernel</name>
-        <version>10.4.3-rx-1.0.9</version>
+        <version>10.4.3-rx-1.0.10</version>
         <!-- include path setting -->
         <incdir>
             <path>src/FreeRTOS/Source/include</path>
@@ -119,6 +123,8 @@
             <group>RX23E-B</group>
             <group>RX24T</group>
             <group>RX26T</group>
+            <group>RX260</group>
+            <group>RX261</group>
             <path>src/FreeRTOS/Source/portable/GCC/RX600v2</path>
         </incdir>
         <incdir>
@@ -162,6 +168,8 @@
             <group>RX23E-B</group>
             <group>RX24T</group>
             <group>RX26T</group>
+            <group>RX260</group>
+            <group>RX261</group>
             <path>src/FreeRTOS/Source/portable/Renesas/RX600v2</path>
         </incdir>
         <incdir>
@@ -255,6 +263,8 @@
             <group>RX23E-B</group>
             <group>RX24T</group>
             <group>RX26T</group>
+            <group>RX260</group>
+            <group>RX261</group>
             <folder>portable/Renesas/RX600v2</folder>
             <path>src/FreeRTOS/Source/portable/Renesas/RX600v2</path>
         </impdir>
@@ -295,6 +305,8 @@
             <group>RX23E-B</group>
             <group>RX24T</group>
             <group>RX26T</group>
+            <group>RX260</group>
+            <group>RX261</group>
             <folder>portable/GCC/RX600v2</folder>
             <path>src/FreeRTOS/Source/portable/GCC/RX600v2</path>
         </impdir>
@@ -346,6 +358,8 @@
         <group>RX23E-B</group>
         <group>RX24T</group>
         <group>RX26T</group>
+        <group>RX260</group>
+        <group>RX261</group>
         <group>RX64M</group>
         <group>RX651</group>
         <group>RX65N</group>
@@ -440,6 +454,8 @@
             <group>RX23E-B</group>
             <group>RX24T</group>
             <group>RX26T</group>
+            <group>RX260</group>
+            <group>RX261</group>
             <path>src/FreeRTOS/Source/portable/Renesas/RX600v2/portmacro.h</path>
         </property>
         <property id="portBYTE_ALIGNMENT">
@@ -483,6 +499,8 @@
             <group>RX23E-B</group>
             <group>RX24T</group>
             <group>RX26T</group>
+            <group>RX260</group>
+            <group>RX261</group>
             <path>src/FreeRTOS/Source/portable/GCC/RX600v2/portmacro.h</path>
         </property>
         <property id="portBYTE_ALIGNMENT">

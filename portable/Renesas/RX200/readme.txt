@@ -23,6 +23,8 @@ RX23T           RXv2    Yes         ---         Renesas/RX600v2         GCC/RX60
 RX24T           RXv2    Yes         ---         Renesas/RX600v2         GCC/RX600v2         IAR/RXv2
 RX24U           RXv2    Yes         ---         Renesas/RX600v2         GCC/RX600v2         IAR/RXv2
 RX26T           RXv3    Yes         No          Renesas/RX600v2 (*5)    GCC/RX600v2 (*5)    IAR/RXv2 (*5)
+RX260           RXv3    Yes         No          Renesas/RX600v2 (*5)    GCC/RX600v2 (*5)    IAR/RXv2 (*5)
+RX261           RXv3    Yes         No          Renesas/RX600v2 (*5)    GCC/RX600v2 (*5)    IAR/RXv2 (*5)
 
 RX610           RXv1    Yes         ---         N/A (*4)                N/A (*4)            N/A (*4)
 RX62N,RX621     RXv1    Yes         ---         Renesas/RX600           GCC/RX600           IAR/RX600
