@@ -38,10 +38,6 @@ Includes   <System Includes> , "Project Includes"
 
 #if (BSP_CFG_RTOS_USED == 1)
 
-#if (RTOS_USB_SUPPORT == 1)
-#include "r_usb_basic_if.h"
-#include "r_usb_cstd_rtos.h"
-#endif
 
 /******************************************************************************
 Macro definitions
@@ -371,18 +367,6 @@ void Processing_Before_Start_Kernel(void)
 
 
     /************** memory pool creation *********************/
-    
-    /** USB RTOS Configuration **/
-#if (RTOS_USB_SUPPORT == 1)
-    usb_rtos_err_t err = usb_rtos_configuration();
-    if (UsbRtos_Success != err)
-    {
-        while(1)
-        {
-            /** Failure of UsbRtos Configuration **/
-        }
-    }
-#endif
 
     Kernel_Object_init();
 
