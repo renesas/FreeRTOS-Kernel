@@ -107,8 +107,8 @@ portRESTORE_CONTEXT .macro
      ; Jump over next 3 instructions: stsr (4 bytes)*2 + popsp (4 bytes)
     bz      12
     popsp   r18, r19
-    ldsr    r18, FPEPC
-    ldsr    r19, FPSR
+    ldsr    r19, FPEPC
+    ldsr    r18, FPSR
 
     ;Restore general-purpose registers and EIPSW, EIPC, EIIC, CTPSW, CTPC
     popsp   r15, r19
@@ -161,13 +161,13 @@ SAVE_REGISTER .macro
 ;------------------------------------------------------------------------------
 RESTORE_REGISTER .macro
 
-    mov     FPU_MSK, r16
+    mov     FPU_MSK, r19
     stsr    PSW, r18
     tst     r18, r19
     bz      12
     popsp   r18, r19
-    ldsr    r18, FPEPC
-    ldsr    r19, FPSR
+    ldsr    r19, FPEPC
+    ldsr    r18, FPSR
 
     popsp   r13, r19
     ldsr    r13, CTPC
