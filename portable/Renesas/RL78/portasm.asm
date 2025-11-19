@@ -1,6 +1,8 @@
 ;/*
-; * FreeRTOS Kernel V10.4.3
+; * FreeRTOS Kernel V11.1.0
 ; * Copyright (C) 2020 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
+; *
+; * SPDX-License-Identifier: MIT
 ; *
 ; * Permission is hereby granted, free of charge, to any person obtaining a copy of
 ; * this software and associated documentation files (the "Software"), to deal in
@@ -25,7 +27,6 @@
 ; * 1 tab == 4 spaces!
 ; */
 
-;$include "FreeRTOSConfig.h"
 $include "ISR_Support.h"
 
     .PUBLIC    _vPortYield
@@ -34,8 +35,6 @@ $include "ISR_Support.h"
 
     .EXTERN    _vTaskSwitchContext
     .EXTERN    _xTaskIncrementTick
-
-    .extern    _Clear_ITLSFlag
 
 ;/* FreeRTOS yield handler.  This is installed as the BRK software interrupt handler. */
     .SECTION .text,TEXT
