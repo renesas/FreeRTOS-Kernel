@@ -2,6 +2,8 @@
  * FreeRTOS Kernel V11.1.0
  * Copyright (C) 2024 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
+ * SPDX-License-Identifier: MIT
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
  * this software and associated documentation files (the "Software"), to deal in
  * the Software without restriction, including without limitation the rights to
@@ -157,7 +159,7 @@ StackType_t * pxPortInitialiseStack( StackType_t * pxTopOfStack,
     *pxTopOfStack = ( StackType_t ) portNO_CRITICAL_SECTION_NESTING;
 
     /* Return a pointer to the top of the stack that has beene generated so it
-     can	be stored in the task control block for the task. */
+     can be stored in the task control block for the task. */
     return pxTopOfStack;
 }
 /*-----------------------------------------------------------*/

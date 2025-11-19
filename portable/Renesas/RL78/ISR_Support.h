@@ -1,6 +1,8 @@
 ;/*
-; * FreeRTOS Kernel V10.4.3
+; * FreeRTOS Kernel V11.1.0
 ; * Copyright (C) 2020 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
+; *
+; * SPDX-License-Identifier: MIT
 ; *
 ; * Permission is hereby granted, free of charge, to any person obtaining a copy of
 ; * this software and associated documentation files (the "Software"), to deal in
@@ -71,7 +73,7 @@ portRESTORE_CONTEXT .MACRO
     MOVW    AX, !_pxCurrentTCB
     MOVW    HL, AX
     MOVW    AX, [HL]
-    MOVW	SP, AX
+    MOVW    SP, AX
 ;   /* Restore usCriticalNesting value. */
     POP     AX
     MOVW    !_usCriticalNesting, AX
