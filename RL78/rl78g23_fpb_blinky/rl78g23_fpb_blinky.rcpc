@@ -1,0 +1,1962 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MicomToolCommonProjectFile Version="1.00">
+  <CreatorType Name="e2studio" Version=""/>
+  <Placeholders>
+    <PlaceholderPrefix>${</PlaceholderPrefix>
+    <PlaceholderPostfix>}</PlaceholderPostfix>
+  </Placeholders>
+  <Project Name="rl78g23_fpb_blinky" Type="Application">
+    <Files>
+      <Category Name="src">
+        <Category Name="application">
+          <Category Name="app">
+            <Path>src\application\app\main.c</Path>
+            <Path>src\application\app\user_task.c</Path>
+            <Path>src\application\app\user_task.h</Path>
+          </Category>
+          <Category Name="config">
+            <Path>src\application\config\FreeRTOSConfig.h</Path>
+          </Category>
+          <Category Name="startup">
+            <Path>src\application\startup\freertos_start.c</Path>
+            <Path>src\application\startup\freertos_start.h</Path>
+            <Path>src\application\startup\freertos_user.c</Path>
+            <Path>src\application\startup\freertos_user.h</Path>
+          </Category>
+        </Category>
+        <Category Name="kernel">
+          <Path>src\kernel\CMakeLists.txt</Path>
+          <Path>src\kernel\History.txt</Path>
+          <Path>src\kernel\croutine.c</Path>
+          <Path>src\kernel\event_groups.c</Path>
+          <Path>src\kernel\list.c</Path>
+          <Path>src\kernel\queue.c</Path>
+          <Path>src\kernel\stream_buffer.c</Path>
+          <Path>src\kernel\tasks.c</Path>
+          <Path>src\kernel\timers.c</Path>
+          <Category Name=".github">
+            <Path>src\kernel\.github\.cSpellWords.txt</Path>
+          </Category>
+          <Category Name="examples">
+            <Category Name="cmake_example">
+              <Path>src\kernel\examples\cmake_example\CMakeLists.txt</Path>
+              <Path>src\kernel\examples\cmake_example\main.c</Path>
+            </Category>
+            <Category Name="coverity">
+              <Path>src\kernel\examples\coverity\CMakeLists.txt</Path>
+              <Path>src\kernel\examples\coverity\FreeRTOSConfig.h</Path>
+            </Category>
+            <Category Name="template_configuration">
+              <Path>src\kernel\examples\template_configuration\FreeRTOSConfig.h</Path>
+            </Category>
+          </Category>
+          <Category Name="include">
+            <Path>src\kernel\include\CMakeLists.txt</Path>
+            <Path>src\kernel\include\FreeRTOS.h</Path>
+            <Path>src\kernel\include\StackMacros.h</Path>
+            <Path>src\kernel\include\atomic.h</Path>
+            <Path>src\kernel\include\croutine.h</Path>
+            <Path>src\kernel\include\deprecated_definitions.h</Path>
+            <Path>src\kernel\include\event_groups.h</Path>
+            <Path>src\kernel\include\list.h</Path>
+            <Path>src\kernel\include\message_buffer.h</Path>
+            <Path>src\kernel\include\mpu_prototypes.h</Path>
+            <Path>src\kernel\include\mpu_syscall_numbers.h</Path>
+            <Path>src\kernel\include\mpu_wrappers.h</Path>
+            <Path>src\kernel\include\newlib-freertos.h</Path>
+            <Path>src\kernel\include\picolibc-freertos.h</Path>
+            <Path>src\kernel\include\portable.h</Path>
+            <Path>src\kernel\include\projdefs.h</Path>
+            <Path>src\kernel\include\queue.h</Path>
+            <Path>src\kernel\include\semphr.h</Path>
+            <Path>src\kernel\include\stack_macros.h</Path>
+            <Path>src\kernel\include\stream_buffer.h</Path>
+            <Path>src\kernel\include\task.h</Path>
+            <Path>src\kernel\include\timers.h</Path>
+          </Category>
+          <Category Name="portable">
+            <Path>src\kernel\portable\CMakeLists.txt</Path>
+            <Path>src\kernel\portable\readme.txt</Path>
+            <Category Name="ARMClang">
+              <Path>src\kernel\portable\ARMClang\Use-the-GCC-ports.txt</Path>
+            </Category>
+            <Category Name="ARMv8M">
+              <Path>src\kernel\portable\ARMv8M\ReadMe.txt</Path>
+              <Category Name="non_secure">
+                <Path>src\kernel\portable\ARMv8M\non_secure\ReadMe.txt</Path>
+                <Path>src\kernel\portable\ARMv8M\non_secure\port.c</Path>
+                <Path>src\kernel\portable\ARMv8M\non_secure\portasm.h</Path>
+                <Path>src\kernel\portable\ARMv8M\non_secure\portmacrocommon.h</Path>
+                <Category Name="portable">
+                  <Category Name="GCC">
+                    <Category Name="ARM_CM23">
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM23\mpu_wrappers_v2_asm.c</Path>
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM23\portasm.c</Path>
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM23\portmacro.h</Path>
+                    </Category>
+                    <Category Name="ARM_CM23_NTZ">
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM23_NTZ\mpu_wrappers_v2_asm.c</Path>
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM23_NTZ\portasm.c</Path>
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM23_NTZ\portmacro.h</Path>
+                    </Category>
+                    <Category Name="ARM_CM33">
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM33\mpu_wrappers_v2_asm.c</Path>
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM33\portasm.c</Path>
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM33\portmacro.h</Path>
+                    </Category>
+                    <Category Name="ARM_CM33_NTZ">
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM33_NTZ\mpu_wrappers_v2_asm.c</Path>
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM33_NTZ\portasm.c</Path>
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM33_NTZ\portmacro.h</Path>
+                    </Category>
+                    <Category Name="ARM_CM35P">
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM35P\portmacro.h</Path>
+                    </Category>
+                    <Category Name="ARM_CM55">
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM55\portmacro.h</Path>
+                    </Category>
+                    <Category Name="ARM_CM85">
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM85\portmacro.h</Path>
+                    </Category>
+                  </Category>
+                  <Category Name="IAR">
+                    <Category Name="ARM_CM23">
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM23\mpu_wrappers_v2_asm.S</Path>
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM23\portasm.s</Path>
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM23\portmacro.h</Path>
+                    </Category>
+                    <Category Name="ARM_CM23_NTZ">
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM23_NTZ\mpu_wrappers_v2_asm.S</Path>
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM23_NTZ\portasm.s</Path>
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM23_NTZ\portmacro.h</Path>
+                    </Category>
+                    <Category Name="ARM_CM33">
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM33\mpu_wrappers_v2_asm.S</Path>
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM33\portasm.s</Path>
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM33\portmacro.h</Path>
+                    </Category>
+                    <Category Name="ARM_CM33_NTZ">
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM33_NTZ\mpu_wrappers_v2_asm.S</Path>
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM33_NTZ\portasm.s</Path>
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM33_NTZ\portmacro.h</Path>
+                    </Category>
+                    <Category Name="ARM_CM35P">
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM35P\portmacro.h</Path>
+                    </Category>
+                    <Category Name="ARM_CM55">
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM55\portmacro.h</Path>
+                    </Category>
+                    <Category Name="ARM_CM85">
+                      <Path>src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM85\portmacro.h</Path>
+                    </Category>
+                  </Category>
+                </Category>
+              </Category>
+              <Category Name="secure">
+                <Path>src\kernel\portable\ARMv8M\secure\ReadMe.txt</Path>
+                <Category Name="context">
+                  <Path>src\kernel\portable\ARMv8M\secure\context\secure_context.c</Path>
+                  <Path>src\kernel\portable\ARMv8M\secure\context\secure_context.h</Path>
+                  <Category Name="portable">
+                    <Category Name="GCC">
+                      <Category Name="ARM_CM23">
+                        <Path>src\kernel\portable\ARMv8M\secure\context\portable\GCC\ARM_CM23\secure_context_port.c</Path>
+                      </Category>
+                      <Category Name="ARM_CM33">
+                        <Path>src\kernel\portable\ARMv8M\secure\context\portable\GCC\ARM_CM33\secure_context_port.c</Path>
+                      </Category>
+                    </Category>
+                    <Category Name="IAR">
+                      <Category Name="ARM_CM23">
+                        <Path>src\kernel\portable\ARMv8M\secure\context\portable\IAR\ARM_CM23\secure_context_port_asm.s</Path>
+                      </Category>
+                      <Category Name="ARM_CM33">
+                        <Path>src\kernel\portable\ARMv8M\secure\context\portable\IAR\ARM_CM33\secure_context_port_asm.s</Path>
+                      </Category>
+                    </Category>
+                  </Category>
+                </Category>
+                <Category Name="heap">
+                  <Path>src\kernel\portable\ARMv8M\secure\heap\secure_heap.c</Path>
+                  <Path>src\kernel\portable\ARMv8M\secure\heap\secure_heap.h</Path>
+                </Category>
+                <Category Name="init">
+                  <Path>src\kernel\portable\ARMv8M\secure\init\secure_init.c</Path>
+                  <Path>src\kernel\portable\ARMv8M\secure\init\secure_init.h</Path>
+                </Category>
+                <Category Name="macros">
+                  <Path>src\kernel\portable\ARMv8M\secure\macros\secure_port_macros.h</Path>
+                </Category>
+              </Category>
+            </Category>
+            <Category Name="BCC">
+              <Category Name="16BitDOS">
+                <Category Name="Flsh186">
+                  <Path>src\kernel\portable\BCC\16BitDOS\Flsh186\port.c</Path>
+                  <Path>src\kernel\portable\BCC\16BitDOS\Flsh186\prtmacro.h</Path>
+                </Category>
+                <Category Name="PC">
+                  <Path>src\kernel\portable\BCC\16BitDOS\PC\port.c</Path>
+                  <Path>src\kernel\portable\BCC\16BitDOS\PC\prtmacro.h</Path>
+                </Category>
+                <Category Name="common">
+                  <Path>src\kernel\portable\BCC\16BitDOS\common\portasm.h</Path>
+                  <Path>src\kernel\portable\BCC\16BitDOS\common\portcomn.c</Path>
+                </Category>
+              </Category>
+            </Category>
+            <Category Name="CCS">
+              <Category Name="ARM_CM3">
+                <Path>src\kernel\portable\CCS\ARM_CM3\port.c</Path>
+                <Path>src\kernel\portable\CCS\ARM_CM3\portasm.asm</Path>
+                <Path>src\kernel\portable\CCS\ARM_CM3\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CM4F">
+                <Path>src\kernel\portable\CCS\ARM_CM4F\port.c</Path>
+                <Path>src\kernel\portable\CCS\ARM_CM4F\portasm.asm</Path>
+                <Path>src\kernel\portable\CCS\ARM_CM4F\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_Cortex-R4">
+                <Path>src\kernel\portable\CCS\ARM_Cortex-R4\port.c</Path>
+                <Path>src\kernel\portable\CCS\ARM_Cortex-R4\portASM.asm</Path>
+                <Path>src\kernel\portable\CCS\ARM_Cortex-R4\portmacro.h</Path>
+              </Category>
+              <Category Name="MSP430X">
+                <Path>src\kernel\portable\CCS\MSP430X\data_model.h</Path>
+                <Path>src\kernel\portable\CCS\MSP430X\port.c</Path>
+                <Path>src\kernel\portable\CCS\MSP430X\portext.asm</Path>
+                <Path>src\kernel\portable\CCS\MSP430X\portmacro.h</Path>
+              </Category>
+            </Category>
+            <Category Name="CodeWarrior">
+              <Category Name="ColdFire_V1">
+                <Path>src\kernel\portable\CodeWarrior\ColdFire_V1\port.c</Path>
+                <Path>src\kernel\portable\CodeWarrior\ColdFire_V1\portasm.S</Path>
+                <Path>src\kernel\portable\CodeWarrior\ColdFire_V1\portmacro.h</Path>
+              </Category>
+              <Category Name="ColdFire_V2">
+                <Path>src\kernel\portable\CodeWarrior\ColdFire_V2\port.c</Path>
+                <Path>src\kernel\portable\CodeWarrior\ColdFire_V2\portasm.S</Path>
+                <Path>src\kernel\portable\CodeWarrior\ColdFire_V2\portmacro.h</Path>
+              </Category>
+              <Category Name="HCS12">
+                <Path>src\kernel\portable\CodeWarrior\HCS12\port.c</Path>
+                <Path>src\kernel\portable\CodeWarrior\HCS12\portmacro.h</Path>
+              </Category>
+            </Category>
+            <Category Name="Common">
+              <Path>src\kernel\portable\Common\mpu_wrappers.c</Path>
+              <Path>src\kernel\portable\Common\mpu_wrappers_v2.c</Path>
+            </Category>
+            <Category Name="GCC">
+              <Category Name="ARM7_AT91FR40008">
+                <Path>src\kernel\portable\GCC\ARM7_AT91FR40008\port.c</Path>
+                <Path>src\kernel\portable\GCC\ARM7_AT91FR40008\portISR.c</Path>
+                <Path>src\kernel\portable\GCC\ARM7_AT91FR40008\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM7_AT91SAM7S">
+                <Path>src\kernel\portable\GCC\ARM7_AT91SAM7S\AT91SAM7X256.h</Path>
+                <Path>src\kernel\portable\GCC\ARM7_AT91SAM7S\ioat91sam7x256.h</Path>
+                <Path>src\kernel\portable\GCC\ARM7_AT91SAM7S\lib_AT91SAM7X256.c</Path>
+                <Path>src\kernel\portable\GCC\ARM7_AT91SAM7S\lib_AT91SAM7X256.h</Path>
+                <Path>src\kernel\portable\GCC\ARM7_AT91SAM7S\port.c</Path>
+                <Path>src\kernel\portable\GCC\ARM7_AT91SAM7S\portISR.c</Path>
+                <Path>src\kernel\portable\GCC\ARM7_AT91SAM7S\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM7_LPC2000">
+                <Path>src\kernel\portable\GCC\ARM7_LPC2000\port.c</Path>
+                <Path>src\kernel\portable\GCC\ARM7_LPC2000\portISR.c</Path>
+                <Path>src\kernel\portable\GCC\ARM7_LPC2000\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM7_LPC23xx">
+                <Path>src\kernel\portable\GCC\ARM7_LPC23xx\port.c</Path>
+                <Path>src\kernel\portable\GCC\ARM7_LPC23xx\portISR.c</Path>
+                <Path>src\kernel\portable\GCC\ARM7_LPC23xx\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_AARCH64">
+                <Path>src\kernel\portable\GCC\ARM_AARCH64\port.c</Path>
+                <Path>src\kernel\portable\GCC\ARM_AARCH64\portASM.S</Path>
+                <Path>src\kernel\portable\GCC\ARM_AARCH64\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_AARCH64_SRE">
+                <Path>src\kernel\portable\GCC\ARM_AARCH64_SRE\port.c</Path>
+                <Path>src\kernel\portable\GCC\ARM_AARCH64_SRE\portASM.S</Path>
+                <Path>src\kernel\portable\GCC\ARM_AARCH64_SRE\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CA9">
+                <Path>src\kernel\portable\GCC\ARM_CA9\port.c</Path>
+                <Path>src\kernel\portable\GCC\ARM_CA9\portASM.S</Path>
+                <Path>src\kernel\portable\GCC\ARM_CA9\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CM0">
+                <Path>src\kernel\portable\GCC\ARM_CM0\mpu_wrappers_v2_asm.c</Path>
+                <Path>src\kernel\portable\GCC\ARM_CM0\port.c</Path>
+                <Path>src\kernel\portable\GCC\ARM_CM0\portasm.c</Path>
+                <Path>src\kernel\portable\GCC\ARM_CM0\portasm.h</Path>
+                <Path>src\kernel\portable\GCC\ARM_CM0\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CM23">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\GCC\ARM_CM23\non_secure\mpu_wrappers_v2_asm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM23\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM23\non_secure\portasm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM23\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM23\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM23\non_secure\portmacrocommon.h</Path>
+                </Category>
+                <Category Name="secure">
+                  <Path>src\kernel\portable\GCC\ARM_CM23\secure\secure_context.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM23\secure\secure_context.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM23\secure\secure_context_port.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM23\secure\secure_heap.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM23\secure\secure_heap.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM23\secure\secure_init.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM23\secure\secure_init.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM23\secure\secure_port_macros.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM23_NTZ">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\GCC\ARM_CM23_NTZ\non_secure\mpu_wrappers_v2_asm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM23_NTZ\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM23_NTZ\non_secure\portasm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM23_NTZ\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM23_NTZ\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM23_NTZ\non_secure\portmacrocommon.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM3">
+                <Path>src\kernel\portable\GCC\ARM_CM3\port.c</Path>
+                <Path>src\kernel\portable\GCC\ARM_CM3\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CM33">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\GCC\ARM_CM33\non_secure\mpu_wrappers_v2_asm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM33\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM33\non_secure\portasm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM33\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM33\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM33\non_secure\portmacrocommon.h</Path>
+                </Category>
+                <Category Name="secure">
+                  <Path>src\kernel\portable\GCC\ARM_CM33\secure\secure_context.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM33\secure\secure_context.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM33\secure\secure_context_port.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM33\secure\secure_heap.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM33\secure\secure_heap.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM33\secure\secure_init.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM33\secure\secure_init.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM33\secure\secure_port_macros.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM33_NTZ">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\GCC\ARM_CM33_NTZ\non_secure\mpu_wrappers_v2_asm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM33_NTZ\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM33_NTZ\non_secure\portasm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM33_NTZ\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM33_NTZ\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM33_NTZ\non_secure\portmacrocommon.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM35P">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\GCC\ARM_CM35P\non_secure\mpu_wrappers_v2_asm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM35P\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM35P\non_secure\portasm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM35P\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM35P\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM35P\non_secure\portmacrocommon.h</Path>
+                </Category>
+                <Category Name="secure">
+                  <Path>src\kernel\portable\GCC\ARM_CM35P\secure\secure_context.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM35P\secure\secure_context.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM35P\secure\secure_context_port.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM35P\secure\secure_heap.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM35P\secure\secure_heap.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM35P\secure\secure_init.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM35P\secure\secure_init.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM35P\secure\secure_port_macros.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM35P_NTZ">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\GCC\ARM_CM35P_NTZ\non_secure\mpu_wrappers_v2_asm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM35P_NTZ\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM35P_NTZ\non_secure\portasm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM35P_NTZ\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM35P_NTZ\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM35P_NTZ\non_secure\portmacrocommon.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM3_MPU">
+                <Path>src\kernel\portable\GCC\ARM_CM3_MPU\mpu_wrappers_v2_asm.c</Path>
+                <Path>src\kernel\portable\GCC\ARM_CM3_MPU\port.c</Path>
+                <Path>src\kernel\portable\GCC\ARM_CM3_MPU\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CM4F">
+                <Path>src\kernel\portable\GCC\ARM_CM4F\port.c</Path>
+                <Path>src\kernel\portable\GCC\ARM_CM4F\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CM4_MPU">
+                <Path>src\kernel\portable\GCC\ARM_CM4_MPU\mpu_wrappers_v2_asm.c</Path>
+                <Path>src\kernel\portable\GCC\ARM_CM4_MPU\port.c</Path>
+                <Path>src\kernel\portable\GCC\ARM_CM4_MPU\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CM55">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\GCC\ARM_CM55\non_secure\mpu_wrappers_v2_asm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM55\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM55\non_secure\portasm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM55\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM55\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM55\non_secure\portmacrocommon.h</Path>
+                </Category>
+                <Category Name="secure">
+                  <Path>src\kernel\portable\GCC\ARM_CM55\secure\secure_context.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM55\secure\secure_context.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM55\secure\secure_context_port.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM55\secure\secure_heap.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM55\secure\secure_heap.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM55\secure\secure_init.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM55\secure\secure_init.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM55\secure\secure_port_macros.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM55_NTZ">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\GCC\ARM_CM55_NTZ\non_secure\mpu_wrappers_v2_asm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM55_NTZ\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM55_NTZ\non_secure\portasm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM55_NTZ\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM55_NTZ\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM55_NTZ\non_secure\portmacrocommon.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM7">
+                <Path>src\kernel\portable\GCC\ARM_CM7\ReadMe.txt</Path>
+                <Category Name="r0p1">
+                  <Path>src\kernel\portable\GCC\ARM_CM7\r0p1\port.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM7\r0p1\portmacro.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM85">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\GCC\ARM_CM85\non_secure\mpu_wrappers_v2_asm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM85\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM85\non_secure\portasm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM85\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM85\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM85\non_secure\portmacrocommon.h</Path>
+                </Category>
+                <Category Name="secure">
+                  <Path>src\kernel\portable\GCC\ARM_CM85\secure\secure_context.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM85\secure\secure_context.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM85\secure\secure_context_port.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM85\secure\secure_heap.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM85\secure\secure_heap.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM85\secure\secure_init.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM85\secure\secure_init.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM85\secure\secure_port_macros.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM85_NTZ">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\GCC\ARM_CM85_NTZ\non_secure\mpu_wrappers_v2_asm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM85_NTZ\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM85_NTZ\non_secure\portasm.c</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM85_NTZ\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM85_NTZ\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\GCC\ARM_CM85_NTZ\non_secure\portmacrocommon.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CR5">
+                <Path>src\kernel\portable\GCC\ARM_CR5\port.c</Path>
+                <Path>src\kernel\portable\GCC\ARM_CR5\portASM.S</Path>
+                <Path>src\kernel\portable\GCC\ARM_CR5\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CRx_MPU">
+                <Path>src\kernel\portable\GCC\ARM_CRx_MPU\mpu_wrappers_v2_asm.S</Path>
+                <Path>src\kernel\portable\GCC\ARM_CRx_MPU\port.c</Path>
+                <Path>src\kernel\portable\GCC\ARM_CRx_MPU\portASM.S</Path>
+                <Path>src\kernel\portable\GCC\ARM_CRx_MPU\portmacro.h</Path>
+                <Path>src\kernel\portable\GCC\ARM_CRx_MPU\portmacro_asm.h</Path>
+              </Category>
+              <Category Name="ARM_CRx_No_GIC">
+                <Path>src\kernel\portable\GCC\ARM_CRx_No_GIC\port.c</Path>
+                <Path>src\kernel\portable\GCC\ARM_CRx_No_GIC\portASM.S</Path>
+                <Path>src\kernel\portable\GCC\ARM_CRx_No_GIC\portmacro.h</Path>
+              </Category>
+              <Category Name="ATMega323">
+                <Path>src\kernel\portable\GCC\ATMega323\port.c</Path>
+                <Path>src\kernel\portable\GCC\ATMega323\portmacro.h</Path>
+              </Category>
+              <Category Name="AVR32_UC3">
+                <Path>src\kernel\portable\GCC\AVR32_UC3\exception.S</Path>
+                <Path>src\kernel\portable\GCC\AVR32_UC3\port.c</Path>
+                <Path>src\kernel\portable\GCC\AVR32_UC3\portmacro.h</Path>
+              </Category>
+              <Category Name="CORTUS_APS3">
+                <Path>src\kernel\portable\GCC\CORTUS_APS3\port.c</Path>
+                <Path>src\kernel\portable\GCC\CORTUS_APS3\portmacro.h</Path>
+              </Category>
+              <Category Name="ColdFire_V2">
+                <Path>src\kernel\portable\GCC\ColdFire_V2\port.c</Path>
+                <Path>src\kernel\portable\GCC\ColdFire_V2\portasm.S</Path>
+                <Path>src\kernel\portable\GCC\ColdFire_V2\portmacro.h</Path>
+              </Category>
+              <Category Name="H8S2329">
+                <Path>src\kernel\portable\GCC\H8S2329\port.c</Path>
+                <Path>src\kernel\portable\GCC\H8S2329\portmacro.h</Path>
+              </Category>
+              <Category Name="HCS12">
+                <Path>src\kernel\portable\GCC\HCS12\port.c</Path>
+                <Path>src\kernel\portable\GCC\HCS12\portmacro.h</Path>
+              </Category>
+              <Category Name="IA32_flat">
+                <Path>src\kernel\portable\GCC\IA32_flat\ISR_Support.h</Path>
+                <Path>src\kernel\portable\GCC\IA32_flat\port.c</Path>
+                <Path>src\kernel\portable\GCC\IA32_flat\portASM.S</Path>
+                <Path>src\kernel\portable\GCC\IA32_flat\portmacro.h</Path>
+              </Category>
+              <Category Name="MSP430F449">
+                <Path>src\kernel\portable\GCC\MSP430F449\port.c</Path>
+                <Path>src\kernel\portable\GCC\MSP430F449\portmacro.h</Path>
+              </Category>
+              <Category Name="MicroBlaze">
+                <Path>src\kernel\portable\GCC\MicroBlaze\port.c</Path>
+                <Path>src\kernel\portable\GCC\MicroBlaze\portasm.s</Path>
+                <Path>src\kernel\portable\GCC\MicroBlaze\portmacro.h</Path>
+              </Category>
+              <Category Name="MicroBlazeV8">
+                <Path>src\kernel\portable\GCC\MicroBlazeV8\port.c</Path>
+                <Path>src\kernel\portable\GCC\MicroBlazeV8\port_exceptions.c</Path>
+                <Path>src\kernel\portable\GCC\MicroBlazeV8\portasm.S</Path>
+                <Path>src\kernel\portable\GCC\MicroBlazeV8\portmacro.h</Path>
+              </Category>
+              <Category Name="MicroBlazeV9">
+                <Path>src\kernel\portable\GCC\MicroBlazeV9\port.c</Path>
+                <Path>src\kernel\portable\GCC\MicroBlazeV9\port_exceptions.c</Path>
+                <Path>src\kernel\portable\GCC\MicroBlazeV9\portasm.S</Path>
+                <Path>src\kernel\portable\GCC\MicroBlazeV9\portmacro.h</Path>
+              </Category>
+              <Category Name="NiosII">
+                <Path>src\kernel\portable\GCC\NiosII\port.c</Path>
+                <Path>src\kernel\portable\GCC\NiosII\port_asm.S</Path>
+                <Path>src\kernel\portable\GCC\NiosII\portmacro.h</Path>
+              </Category>
+              <Category Name="PPC405_Xilinx">
+                <Path>src\kernel\portable\GCC\PPC405_Xilinx\FPU_Macros.h</Path>
+                <Path>src\kernel\portable\GCC\PPC405_Xilinx\port.c</Path>
+                <Path>src\kernel\portable\GCC\PPC405_Xilinx\portasm.S</Path>
+                <Path>src\kernel\portable\GCC\PPC405_Xilinx\portmacro.h</Path>
+              </Category>
+              <Category Name="PPC440_Xilinx">
+                <Path>src\kernel\portable\GCC\PPC440_Xilinx\FPU_Macros.h</Path>
+                <Path>src\kernel\portable\GCC\PPC440_Xilinx\port.c</Path>
+                <Path>src\kernel\portable\GCC\PPC440_Xilinx\portasm.S</Path>
+                <Path>src\kernel\portable\GCC\PPC440_Xilinx\portmacro.h</Path>
+              </Category>
+              <Category Name="RISC-V">
+                <Path>src\kernel\portable\GCC\RISC-V\port.c</Path>
+                <Path>src\kernel\portable\GCC\RISC-V\portASM.S</Path>
+                <Path>src\kernel\portable\GCC\RISC-V\portContext.h</Path>
+                <Path>src\kernel\portable\GCC\RISC-V\portmacro.h</Path>
+                <Path>src\kernel\portable\GCC\RISC-V\readme.txt</Path>
+                <Category Name="chip_specific_extensions">
+                  <Path>src\kernel\portable\GCC\RISC-V\chip_specific_extensions\readme.txt</Path>
+                  <Category Name="Pulpino_Vega_RV32M1RM">
+                    <Path>src\kernel\portable\GCC\RISC-V\chip_specific_extensions\Pulpino_Vega_RV32M1RM\freertos_risc_v_chip_specific_extensions.h</Path>
+                  </Category>
+                  <Category Name="RISCV_MTIME_CLINT_no_extensions">
+                    <Path>src\kernel\portable\GCC\RISC-V\chip_specific_extensions\RISCV_MTIME_CLINT_no_extensions\freertos_risc_v_chip_specific_extensions.h</Path>
+                  </Category>
+                  <Category Name="RISCV_no_extensions">
+                    <Path>src\kernel\portable\GCC\RISC-V\chip_specific_extensions\RISCV_no_extensions\freertos_risc_v_chip_specific_extensions.h</Path>
+                  </Category>
+                  <Category Name="RV32I_CLINT_no_extensions">
+                    <Path>src\kernel\portable\GCC\RISC-V\chip_specific_extensions\RV32I_CLINT_no_extensions\freertos_risc_v_chip_specific_extensions.h</Path>
+                  </Category>
+                </Category>
+              </Category>
+              <Category Name="RL78">
+                <Path>src\kernel\portable\GCC\RL78\isr_support.h</Path>
+                <Path>src\kernel\portable\GCC\RL78\port.c</Path>
+                <Path>src\kernel\portable\GCC\RL78\portasm.S</Path>
+                <Path>src\kernel\portable\GCC\RL78\portmacro.h</Path>
+              </Category>
+              <Category Name="RX100">
+                <Path>src\kernel\portable\GCC\RX100\port.c</Path>
+                <Path>src\kernel\portable\GCC\RX100\portmacro.h</Path>
+                <Path>src\kernel\portable\GCC\RX100\readme.txt</Path>
+              </Category>
+              <Category Name="RX200">
+                <Path>src\kernel\portable\GCC\RX200\port.c</Path>
+                <Path>src\kernel\portable\GCC\RX200\portmacro.h</Path>
+              </Category>
+              <Category Name="RX600">
+                <Path>src\kernel\portable\GCC\RX600\port.c</Path>
+                <Path>src\kernel\portable\GCC\RX600\portmacro.h</Path>
+                <Path>src\kernel\portable\GCC\RX600\readme.txt</Path>
+              </Category>
+              <Category Name="RX600v2">
+                <Path>src\kernel\portable\GCC\RX600v2\port.c</Path>
+                <Path>src\kernel\portable\GCC\RX600v2\portmacro.h</Path>
+                <Path>src\kernel\portable\GCC\RX600v2\readme.txt</Path>
+              </Category>
+              <Category Name="RX700v3_DPFPU">
+                <Path>src\kernel\portable\GCC\RX700v3_DPFPU\port.c</Path>
+                <Path>src\kernel\portable\GCC\RX700v3_DPFPU\portmacro.h</Path>
+                <Path>src\kernel\portable\GCC\RX700v3_DPFPU\readme.txt</Path>
+              </Category>
+              <Category Name="STR75x">
+                <Path>src\kernel\portable\GCC\STR75x\port.c</Path>
+                <Path>src\kernel\portable\GCC\STR75x\portISR.c</Path>
+                <Path>src\kernel\portable\GCC\STR75x\portmacro.h</Path>
+              </Category>
+              <Category Name="TriCore_1782">
+                <Path>src\kernel\portable\GCC\TriCore_1782\port.c</Path>
+                <Path>src\kernel\portable\GCC\TriCore_1782\portmacro.h</Path>
+                <Path>src\kernel\portable\GCC\TriCore_1782\porttrap.c</Path>
+              </Category>
+            </Category>
+            <Category Name="IAR">
+              <Category Name="78K0R">
+                <Path>src\kernel\portable\IAR\78K0R\ISR_Support.h</Path>
+                <Path>src\kernel\portable\IAR\78K0R\port.c</Path>
+                <Path>src\kernel\portable\IAR\78K0R\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CA5_No_GIC">
+                <Path>src\kernel\portable\IAR\ARM_CA5_No_GIC\port.c</Path>
+                <Path>src\kernel\portable\IAR\ARM_CA5_No_GIC\portASM.h</Path>
+                <Path>src\kernel\portable\IAR\ARM_CA5_No_GIC\portASM.s</Path>
+                <Path>src\kernel\portable\IAR\ARM_CA5_No_GIC\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CA9">
+                <Path>src\kernel\portable\IAR\ARM_CA9\port.c</Path>
+                <Path>src\kernel\portable\IAR\ARM_CA9\portASM.h</Path>
+                <Path>src\kernel\portable\IAR\ARM_CA9\portASM.s</Path>
+                <Path>src\kernel\portable\IAR\ARM_CA9\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CM0">
+                <Path>src\kernel\portable\IAR\ARM_CM0\port.c</Path>
+                <Path>src\kernel\portable\IAR\ARM_CM0\portasm.s</Path>
+                <Path>src\kernel\portable\IAR\ARM_CM0\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CM23">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\IAR\ARM_CM23\non_secure\mpu_wrappers_v2_asm.S</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM23\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM23\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM23\non_secure\portasm.s</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM23\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM23\non_secure\portmacrocommon.h</Path>
+                </Category>
+                <Category Name="secure">
+                  <Path>src\kernel\portable\IAR\ARM_CM23\secure\secure_context.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM23\secure\secure_context.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM23\secure\secure_context_port_asm.s</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM23\secure\secure_heap.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM23\secure\secure_heap.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM23\secure\secure_init.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM23\secure\secure_init.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM23\secure\secure_port_macros.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM23_NTZ">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\IAR\ARM_CM23_NTZ\non_secure\mpu_wrappers_v2_asm.S</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM23_NTZ\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM23_NTZ\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM23_NTZ\non_secure\portasm.s</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM23_NTZ\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM23_NTZ\non_secure\portmacrocommon.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM3">
+                <Path>src\kernel\portable\IAR\ARM_CM3\port.c</Path>
+                <Path>src\kernel\portable\IAR\ARM_CM3\portasm.s</Path>
+                <Path>src\kernel\portable\IAR\ARM_CM3\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CM33">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\IAR\ARM_CM33\non_secure\mpu_wrappers_v2_asm.S</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM33\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM33\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM33\non_secure\portasm.s</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM33\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM33\non_secure\portmacrocommon.h</Path>
+                </Category>
+                <Category Name="secure">
+                  <Path>src\kernel\portable\IAR\ARM_CM33\secure\secure_context.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM33\secure\secure_context.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM33\secure\secure_context_port_asm.s</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM33\secure\secure_heap.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM33\secure\secure_heap.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM33\secure\secure_init.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM33\secure\secure_init.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM33\secure\secure_port_macros.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM33_NTZ">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\IAR\ARM_CM33_NTZ\non_secure\mpu_wrappers_v2_asm.S</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM33_NTZ\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM33_NTZ\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM33_NTZ\non_secure\portasm.s</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM33_NTZ\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM33_NTZ\non_secure\portmacrocommon.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM35P">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\IAR\ARM_CM35P\non_secure\mpu_wrappers_v2_asm.S</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM35P\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM35P\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM35P\non_secure\portasm.s</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM35P\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM35P\non_secure\portmacrocommon.h</Path>
+                </Category>
+                <Category Name="secure">
+                  <Path>src\kernel\portable\IAR\ARM_CM35P\secure\secure_context.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM35P\secure\secure_context.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM35P\secure\secure_context_port_asm.s</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM35P\secure\secure_heap.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM35P\secure\secure_heap.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM35P\secure\secure_init.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM35P\secure\secure_init.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM35P\secure\secure_port_macros.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM35P_NTZ">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\IAR\ARM_CM35P_NTZ\non_secure\mpu_wrappers_v2_asm.S</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM35P_NTZ\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM35P_NTZ\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM35P_NTZ\non_secure\portasm.s</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM35P_NTZ\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM35P_NTZ\non_secure\portmacrocommon.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM4F">
+                <Path>src\kernel\portable\IAR\ARM_CM4F\port.c</Path>
+                <Path>src\kernel\portable\IAR\ARM_CM4F\portasm.s</Path>
+                <Path>src\kernel\portable\IAR\ARM_CM4F\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CM4F_MPU">
+                <Path>src\kernel\portable\IAR\ARM_CM4F_MPU\mpu_wrappers_v2_asm.S</Path>
+                <Path>src\kernel\portable\IAR\ARM_CM4F_MPU\port.c</Path>
+                <Path>src\kernel\portable\IAR\ARM_CM4F_MPU\portasm.s</Path>
+                <Path>src\kernel\portable\IAR\ARM_CM4F_MPU\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CM55">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\IAR\ARM_CM55\non_secure\mpu_wrappers_v2_asm.S</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM55\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM55\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM55\non_secure\portasm.s</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM55\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM55\non_secure\portmacrocommon.h</Path>
+                </Category>
+                <Category Name="secure">
+                  <Path>src\kernel\portable\IAR\ARM_CM55\secure\secure_context.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM55\secure\secure_context.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM55\secure\secure_context_port_asm.s</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM55\secure\secure_heap.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM55\secure\secure_heap.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM55\secure\secure_init.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM55\secure\secure_init.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM55\secure\secure_port_macros.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM55_NTZ">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\IAR\ARM_CM55_NTZ\non_secure\mpu_wrappers_v2_asm.S</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM55_NTZ\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM55_NTZ\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM55_NTZ\non_secure\portasm.s</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM55_NTZ\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM55_NTZ\non_secure\portmacrocommon.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM7">
+                <Path>src\kernel\portable\IAR\ARM_CM7\ReadMe.txt</Path>
+                <Category Name="r0p1">
+                  <Path>src\kernel\portable\IAR\ARM_CM7\r0p1\port.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM7\r0p1\portasm.s</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM7\r0p1\portmacro.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM85">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\IAR\ARM_CM85\non_secure\mpu_wrappers_v2_asm.S</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM85\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM85\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM85\non_secure\portasm.s</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM85\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM85\non_secure\portmacrocommon.h</Path>
+                </Category>
+                <Category Name="secure">
+                  <Path>src\kernel\portable\IAR\ARM_CM85\secure\secure_context.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM85\secure\secure_context.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM85\secure\secure_context_port_asm.s</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM85\secure\secure_heap.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM85\secure\secure_heap.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM85\secure\secure_init.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM85\secure\secure_init.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM85\secure\secure_port_macros.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CM85_NTZ">
+                <Category Name="non_secure">
+                  <Path>src\kernel\portable\IAR\ARM_CM85_NTZ\non_secure\mpu_wrappers_v2_asm.S</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM85_NTZ\non_secure\port.c</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM85_NTZ\non_secure\portasm.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM85_NTZ\non_secure\portasm.s</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM85_NTZ\non_secure\portmacro.h</Path>
+                  <Path>src\kernel\portable\IAR\ARM_CM85_NTZ\non_secure\portmacrocommon.h</Path>
+                </Category>
+              </Category>
+              <Category Name="ARM_CRx_No_GIC">
+                <Path>src\kernel\portable\IAR\ARM_CRx_No_GIC\port.c</Path>
+                <Path>src\kernel\portable\IAR\ARM_CRx_No_GIC\portASM.s</Path>
+                <Path>src\kernel\portable\IAR\ARM_CRx_No_GIC\portmacro.h</Path>
+              </Category>
+              <Category Name="ATMega323">
+                <Path>src\kernel\portable\IAR\ATMega323\port.c</Path>
+                <Path>src\kernel\portable\IAR\ATMega323\portmacro.h</Path>
+              </Category>
+              <Category Name="AVR32_UC3">
+                <Path>src\kernel\portable\IAR\AVR32_UC3\port.c</Path>
+                <Path>src\kernel\portable\IAR\AVR32_UC3\portmacro.h</Path>
+                <Path>src\kernel\portable\IAR\AVR32_UC3\read.c</Path>
+                <Path>src\kernel\portable\IAR\AVR32_UC3\write.c</Path>
+              </Category>
+              <Category Name="AVR_AVRDx">
+                <Path>src\kernel\portable\IAR\AVR_AVRDx\port.c</Path>
+                <Path>src\kernel\portable\IAR\AVR_AVRDx\porthardware.h</Path>
+                <Path>src\kernel\portable\IAR\AVR_AVRDx\portmacro.h</Path>
+              </Category>
+              <Category Name="AVR_Mega0">
+                <Path>src\kernel\portable\IAR\AVR_Mega0\port.c</Path>
+                <Path>src\kernel\portable\IAR\AVR_Mega0\porthardware.h</Path>
+                <Path>src\kernel\portable\IAR\AVR_Mega0\portmacro.h</Path>
+              </Category>
+              <Category Name="AtmelSAM7S64">
+                <Path>src\kernel\portable\IAR\AtmelSAM7S64\AT91SAM7S64.h</Path>
+                <Path>src\kernel\portable\IAR\AtmelSAM7S64\AT91SAM7S64_inc.h</Path>
+                <Path>src\kernel\portable\IAR\AtmelSAM7S64\AT91SAM7X128.h</Path>
+                <Path>src\kernel\portable\IAR\AtmelSAM7S64\AT91SAM7X128_inc.h</Path>
+                <Path>src\kernel\portable\IAR\AtmelSAM7S64\AT91SAM7X256.h</Path>
+                <Path>src\kernel\portable\IAR\AtmelSAM7S64\AT91SAM7X256_inc.h</Path>
+                <Path>src\kernel\portable\IAR\AtmelSAM7S64\ISR_Support.h</Path>
+                <Path>src\kernel\portable\IAR\AtmelSAM7S64\lib_AT91SAM7S64.h</Path>
+                <Path>src\kernel\portable\IAR\AtmelSAM7S64\lib_AT91SAM7X128.h</Path>
+                <Path>src\kernel\portable\IAR\AtmelSAM7S64\lib_AT91SAM7X256.h</Path>
+                <Path>src\kernel\portable\IAR\AtmelSAM7S64\port.c</Path>
+                <Path>src\kernel\portable\IAR\AtmelSAM7S64\portmacro.h</Path>
+              </Category>
+              <Category Name="AtmelSAM9XE">
+                <Path>src\kernel\portable\IAR\AtmelSAM9XE\ISR_Support.h</Path>
+                <Path>src\kernel\portable\IAR\AtmelSAM9XE\port.c</Path>
+                <Path>src\kernel\portable\IAR\AtmelSAM9XE\portmacro.h</Path>
+              </Category>
+              <Category Name="LPC2000">
+                <Path>src\kernel\portable\IAR\LPC2000\ISR_Support.h</Path>
+                <Path>src\kernel\portable\IAR\LPC2000\port.c</Path>
+                <Path>src\kernel\portable\IAR\LPC2000\portmacro.h</Path>
+              </Category>
+              <Category Name="MSP430">
+                <Path>src\kernel\portable\IAR\MSP430\port.c</Path>
+                <Path>src\kernel\portable\IAR\MSP430\portasm.h</Path>
+                <Path>src\kernel\portable\IAR\MSP430\portmacro.h</Path>
+              </Category>
+              <Category Name="MSP430X">
+                <Path>src\kernel\portable\IAR\MSP430X\data_model.h</Path>
+                <Path>src\kernel\portable\IAR\MSP430X\port.c</Path>
+                <Path>src\kernel\portable\IAR\MSP430X\portmacro.h</Path>
+              </Category>
+              <Category Name="RISC-V">
+                <Path>src\kernel\portable\IAR\RISC-V\port.c</Path>
+                <Path>src\kernel\portable\IAR\RISC-V\portASM.s</Path>
+                <Path>src\kernel\portable\IAR\RISC-V\portContext.h</Path>
+                <Path>src\kernel\portable\IAR\RISC-V\portmacro.h</Path>
+                <Path>src\kernel\portable\IAR\RISC-V\readme.txt</Path>
+                <Category Name="chip_specific_extensions">
+                  <Path>src\kernel\portable\IAR\RISC-V\chip_specific_extensions\readme.txt</Path>
+                  <Category Name="RV32I_CLINT_no_extensions">
+                    <Path>src\kernel\portable\IAR\RISC-V\chip_specific_extensions\RV32I_CLINT_no_extensions\freertos_risc_v_chip_specific_extensions.h</Path>
+                  </Category>
+                </Category>
+              </Category>
+              <Category Name="RL78">
+                <Path>src\kernel\portable\IAR\RL78\port.c</Path>
+                <Path>src\kernel\portable\IAR\RL78\portasm.s</Path>
+                <Path>src\kernel\portable\IAR\RL78\portmacro.h</Path>
+              </Category>
+              <Category Name="RX100">
+                <Path>src\kernel\portable\IAR\RX100\port.c</Path>
+                <Path>src\kernel\portable\IAR\RX100\port_asm.s</Path>
+                <Path>src\kernel\portable\IAR\RX100\portmacro.h</Path>
+                <Path>src\kernel\portable\IAR\RX100\readme.txt</Path>
+              </Category>
+              <Category Name="RX600">
+                <Path>src\kernel\portable\IAR\RX600\port.c</Path>
+                <Path>src\kernel\portable\IAR\RX600\port_asm.s</Path>
+                <Path>src\kernel\portable\IAR\RX600\portmacro.h</Path>
+                <Path>src\kernel\portable\IAR\RX600\readme.txt</Path>
+              </Category>
+              <Category Name="RX700v3_DPFPU">
+                <Path>src\kernel\portable\IAR\RX700v3_DPFPU\port.c</Path>
+                <Path>src\kernel\portable\IAR\RX700v3_DPFPU\portmacro.h</Path>
+                <Path>src\kernel\portable\IAR\RX700v3_DPFPU\readme.txt</Path>
+              </Category>
+              <Category Name="RXv2">
+                <Path>src\kernel\portable\IAR\RXv2\port.c</Path>
+                <Path>src\kernel\portable\IAR\RXv2\port_asm.s</Path>
+                <Path>src\kernel\portable\IAR\RXv2\portmacro.h</Path>
+                <Path>src\kernel\portable\IAR\RXv2\readme.txt</Path>
+              </Category>
+              <Category Name="STR71x">
+                <Path>src\kernel\portable\IAR\STR71x\ISR_Support.h</Path>
+                <Path>src\kernel\portable\IAR\STR71x\port.c</Path>
+                <Path>src\kernel\portable\IAR\STR71x\portmacro.h</Path>
+              </Category>
+              <Category Name="STR75x">
+                <Path>src\kernel\portable\IAR\STR75x\ISR_Support.h</Path>
+                <Path>src\kernel\portable\IAR\STR75x\port.c</Path>
+                <Path>src\kernel\portable\IAR\STR75x\portmacro.h</Path>
+              </Category>
+              <Category Name="STR91x">
+                <Path>src\kernel\portable\IAR\STR91x\ISR_Support.h</Path>
+                <Path>src\kernel\portable\IAR\STR91x\port.c</Path>
+                <Path>src\kernel\portable\IAR\STR91x\portmacro.h</Path>
+              </Category>
+              <Category Name="V850ES">
+                <Path>src\kernel\portable\IAR\V850ES\ISR_Support.h</Path>
+                <Path>src\kernel\portable\IAR\V850ES\port.c</Path>
+                <Path>src\kernel\portable\IAR\V850ES\portmacro.h</Path>
+              </Category>
+            </Category>
+            <Category Name="Keil">
+              <Path>src\kernel\portable\Keil\See-also-the-RVDS-directory.txt</Path>
+            </Category>
+            <Category Name="MPLAB">
+              <Category Name="PIC18F">
+                <Path>src\kernel\portable\MPLAB\PIC18F\port.c</Path>
+                <Path>src\kernel\portable\MPLAB\PIC18F\portmacro.h</Path>
+                <Path>src\kernel\portable\MPLAB\PIC18F\stdio.h</Path>
+              </Category>
+              <Category Name="PIC24_dsPIC">
+                <Path>src\kernel\portable\MPLAB\PIC24_dsPIC\port.c</Path>
+                <Path>src\kernel\portable\MPLAB\PIC24_dsPIC\portasm_PIC24.S</Path>
+                <Path>src\kernel\portable\MPLAB\PIC24_dsPIC\portasm_dsPIC.S</Path>
+                <Path>src\kernel\portable\MPLAB\PIC24_dsPIC\portmacro.h</Path>
+              </Category>
+              <Category Name="PIC32MEC14xx">
+                <Path>src\kernel\portable\MPLAB\PIC32MEC14xx\ISR_Support.h</Path>
+                <Path>src\kernel\portable\MPLAB\PIC32MEC14xx\port.c</Path>
+                <Path>src\kernel\portable\MPLAB\PIC32MEC14xx\port_asm.S</Path>
+                <Path>src\kernel\portable\MPLAB\PIC32MEC14xx\portmacro.h</Path>
+              </Category>
+              <Category Name="PIC32MX">
+                <Path>src\kernel\portable\MPLAB\PIC32MX\ISR_Support.h</Path>
+                <Path>src\kernel\portable\MPLAB\PIC32MX\port.c</Path>
+                <Path>src\kernel\portable\MPLAB\PIC32MX\port_asm.S</Path>
+                <Path>src\kernel\portable\MPLAB\PIC32MX\portmacro.h</Path>
+              </Category>
+              <Category Name="PIC32MZ">
+                <Path>src\kernel\portable\MPLAB\PIC32MZ\ISR_Support.h</Path>
+                <Path>src\kernel\portable\MPLAB\PIC32MZ\port.c</Path>
+                <Path>src\kernel\portable\MPLAB\PIC32MZ\port_asm.S</Path>
+                <Path>src\kernel\portable\MPLAB\PIC32MZ\portmacro.h</Path>
+              </Category>
+            </Category>
+            <Category Name="MSVC-MingW">
+              <Path>src\kernel\portable\MSVC-MingW\port.c</Path>
+              <Path>src\kernel\portable\MSVC-MingW\portmacro.h</Path>
+            </Category>
+            <Category Name="MemMang">
+              <Path>src\kernel\portable\MemMang\heap_1.c</Path>
+              <Path>src\kernel\portable\MemMang\heap_2.c</Path>
+              <Path>src\kernel\portable\MemMang\heap_3.c</Path>
+              <Path>src\kernel\portable\MemMang\heap_4.c</Path>
+              <Path>src\kernel\portable\MemMang\heap_5.c</Path>
+            </Category>
+            <Category Name="MikroC">
+              <Category Name="ARM_CM4F">
+                <Path>src\kernel\portable\MikroC\ARM_CM4F\port.c</Path>
+                <Path>src\kernel\portable\MikroC\ARM_CM4F\portmacro.h</Path>
+              </Category>
+            </Category>
+            <Category Name="Paradigm">
+              <Category Name="Tern_EE">
+                <Category Name="large_untested">
+                  <Path>src\kernel\portable\Paradigm\Tern_EE\large_untested\port.c</Path>
+                  <Path>src\kernel\portable\Paradigm\Tern_EE\large_untested\portasm.h</Path>
+                  <Path>src\kernel\portable\Paradigm\Tern_EE\large_untested\portmacro.h</Path>
+                </Category>
+                <Category Name="small">
+                  <Path>src\kernel\portable\Paradigm\Tern_EE\small\port.c</Path>
+                  <Path>src\kernel\portable\Paradigm\Tern_EE\small\portasm.h</Path>
+                  <Path>src\kernel\portable\Paradigm\Tern_EE\small\portmacro.h</Path>
+                </Category>
+              </Category>
+            </Category>
+            <Category Name="RVDS">
+              <Category Name="ARM7_LPC21xx">
+                <Path>src\kernel\portable\RVDS\ARM7_LPC21xx\port.c</Path>
+                <Path>src\kernel\portable\RVDS\ARM7_LPC21xx\portASM.s</Path>
+                <Path>src\kernel\portable\RVDS\ARM7_LPC21xx\portmacro.h</Path>
+                <Path>src\kernel\portable\RVDS\ARM7_LPC21xx\portmacro.inc</Path>
+              </Category>
+              <Category Name="ARM_CA9">
+                <Path>src\kernel\portable\RVDS\ARM_CA9\port.c</Path>
+                <Path>src\kernel\portable\RVDS\ARM_CA9\portASM.s</Path>
+                <Path>src\kernel\portable\RVDS\ARM_CA9\portmacro.h</Path>
+                <Path>src\kernel\portable\RVDS\ARM_CA9\portmacro.inc</Path>
+              </Category>
+              <Category Name="ARM_CM0">
+                <Path>src\kernel\portable\RVDS\ARM_CM0\port.c</Path>
+                <Path>src\kernel\portable\RVDS\ARM_CM0\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CM3">
+                <Path>src\kernel\portable\RVDS\ARM_CM3\port.c</Path>
+                <Path>src\kernel\portable\RVDS\ARM_CM3\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CM4F">
+                <Path>src\kernel\portable\RVDS\ARM_CM4F\port.c</Path>
+                <Path>src\kernel\portable\RVDS\ARM_CM4F\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CM4_MPU">
+                <Path>src\kernel\portable\RVDS\ARM_CM4_MPU\mpu_wrappers_v2_asm.c</Path>
+                <Path>src\kernel\portable\RVDS\ARM_CM4_MPU\port.c</Path>
+                <Path>src\kernel\portable\RVDS\ARM_CM4_MPU\portmacro.h</Path>
+              </Category>
+              <Category Name="ARM_CM7">
+                <Path>src\kernel\portable\RVDS\ARM_CM7\ReadMe.txt</Path>
+                <Category Name="r0p1">
+                  <Path>src\kernel\portable\RVDS\ARM_CM7\r0p1\port.c</Path>
+                  <Path>src\kernel\portable\RVDS\ARM_CM7\r0p1\portmacro.h</Path>
+                </Category>
+              </Category>
+            </Category>
+            <Category Name="Renesas">
+              <Category Name="RL78">
+                <Path>src\kernel\portable\Renesas\RL78\ISR_Support.h</Path>
+                <Path>src\kernel\portable\Renesas\RL78\port.c</Path>
+                <Path>src\kernel\portable\Renesas\RL78\portasm.asm</Path>
+                <Path>src\kernel\portable\Renesas\RL78\portmacro.h</Path>
+              </Category>
+              <Category Name="RX100">
+                <Path>src\kernel\portable\Renesas\RX100\port.c</Path>
+                <Path>src\kernel\portable\Renesas\RX100\port_asm.src</Path>
+                <Path>src\kernel\portable\Renesas\RX100\portmacro.h</Path>
+                <Path>src\kernel\portable\Renesas\RX100\readme.txt</Path>
+              </Category>
+              <Category Name="RX200">
+                <Path>src\kernel\portable\Renesas\RX200\port.c</Path>
+                <Path>src\kernel\portable\Renesas\RX200\port_asm.src</Path>
+                <Path>src\kernel\portable\Renesas\RX200\portmacro.h</Path>
+                <Path>src\kernel\portable\Renesas\RX200\readme.txt</Path>
+              </Category>
+              <Category Name="RX600">
+                <Path>src\kernel\portable\Renesas\RX600\port.c</Path>
+                <Path>src\kernel\portable\Renesas\RX600\port_asm.src</Path>
+                <Path>src\kernel\portable\Renesas\RX600\portmacro.h</Path>
+                <Path>src\kernel\portable\Renesas\RX600\readme.txt</Path>
+              </Category>
+              <Category Name="RX600v2">
+                <Path>src\kernel\portable\Renesas\RX600v2\port.c</Path>
+                <Path>src\kernel\portable\Renesas\RX600v2\port_asm.src</Path>
+                <Path>src\kernel\portable\Renesas\RX600v2\portmacro.h</Path>
+                <Path>src\kernel\portable\Renesas\RX600v2\readme.txt</Path>
+              </Category>
+              <Category Name="RX700v3_DPFPU">
+                <Path>src\kernel\portable\Renesas\RX700v3_DPFPU\port.c</Path>
+                <Path>src\kernel\portable\Renesas\RX700v3_DPFPU\port_asm.src</Path>
+                <Path>src\kernel\portable\Renesas\RX700v3_DPFPU\portmacro.h</Path>
+                <Path>src\kernel\portable\Renesas\RX700v3_DPFPU\readme.txt</Path>
+              </Category>
+              <Category Name="SH2A_FPU">
+                <Path>src\kernel\portable\Renesas\SH2A_FPU\ISR_Support.inc</Path>
+                <Path>src\kernel\portable\Renesas\SH2A_FPU\port.c</Path>
+                <Path>src\kernel\portable\Renesas\SH2A_FPU\portasm.src</Path>
+                <Path>src\kernel\portable\Renesas\SH2A_FPU\portmacro.h</Path>
+              </Category>
+            </Category>
+            <Category Name="Rowley">
+              <Category Name="ARM7">
+                <Path>src\kernel\portable\Rowley\ARM7\readme.txt</Path>
+              </Category>
+              <Category Name="MSP430F449">
+                <Path>src\kernel\portable\Rowley\MSP430F449\port.c</Path>
+                <Path>src\kernel\portable\Rowley\MSP430F449\portasm.h</Path>
+                <Path>src\kernel\portable\Rowley\MSP430F449\portext.asm</Path>
+                <Path>src\kernel\portable\Rowley\MSP430F449\portmacro.h</Path>
+              </Category>
+            </Category>
+            <Category Name="SDCC">
+              <Category Name="Cygnal">
+                <Path>src\kernel\portable\SDCC\Cygnal\port.c</Path>
+                <Path>src\kernel\portable\SDCC\Cygnal\portmacro.h</Path>
+              </Category>
+            </Category>
+            <Category Name="Softune">
+              <Category Name="MB91460">
+                <Path>src\kernel\portable\Softune\MB91460\__STD_LIB_sbrk.c</Path>
+                <Path>src\kernel\portable\Softune\MB91460\port.c</Path>
+                <Path>src\kernel\portable\Softune\MB91460\portmacro.h</Path>
+              </Category>
+              <Category Name="MB96340">
+                <Path>src\kernel\portable\Softune\MB96340\__STD_LIB_sbrk.c</Path>
+                <Path>src\kernel\portable\Softune\MB96340\port.c</Path>
+                <Path>src\kernel\portable\Softune\MB96340\portmacro.h</Path>
+              </Category>
+            </Category>
+            <Category Name="Tasking">
+              <Category Name="ARM_CM4F">
+                <Path>src\kernel\portable\Tasking\ARM_CM4F\port.c</Path>
+                <Path>src\kernel\portable\Tasking\ARM_CM4F\port_asm.asm</Path>
+                <Path>src\kernel\portable\Tasking\ARM_CM4F\portmacro.h</Path>
+              </Category>
+            </Category>
+            <Category Name="ThirdParty">
+              <Category Name="CDK">
+                <Category Name="T-HEAD_CK802">
+                  <Path>src\kernel\portable\ThirdParty\CDK\T-HEAD_CK802\port.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\CDK\T-HEAD_CK802\portasm.S</Path>
+                  <Path>src\kernel\portable\ThirdParty\CDK\T-HEAD_CK802\portmacro.h</Path>
+                </Category>
+              </Category>
+              <Category Name="GCC">
+                <Category Name="ARC_EM_HS">
+                  <Path>src\kernel\portable\ThirdParty\GCC\ARC_EM_HS\arc_freertos_exceptions.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\ARC_EM_HS\arc_freertos_exceptions.h</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\ARC_EM_HS\arc_support.s</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\ARC_EM_HS\freertos_tls.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\ARC_EM_HS\port.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\ARC_EM_HS\portmacro.h</Path>
+                </Category>
+                <Category Name="ARC_v1">
+                  <Path>src\kernel\portable\ThirdParty\GCC\ARC_v1\arc_freertos_exceptions.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\ARC_v1\arc_freertos_exceptions.h</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\ARC_v1\arc_support.s</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\ARC_v1\port.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\ARC_v1\portmacro.h</Path>
+                </Category>
+                <Category Name="ARM_TFM">
+                  <Path>src\kernel\portable\ThirdParty\GCC\ARM_TFM\os_wrapper_freertos.c</Path>
+                </Category>
+                <Category Name="ATmega">
+                  <Path>src\kernel\portable\ThirdParty\GCC\ATmega\port.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\ATmega\portmacro.h</Path>
+                </Category>
+                <Category Name="Posix">
+                  <Path>src\kernel\portable\ThirdParty\GCC\Posix\port.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\Posix\portmacro.h</Path>
+                  <Category Name="utils">
+                    <Path>src\kernel\portable\ThirdParty\GCC\Posix\utils\wait_for_event.c</Path>
+                    <Path>src\kernel\portable\ThirdParty\GCC\Posix\utils\wait_for_event.h</Path>
+                  </Category>
+                </Category>
+                <Category Name="RISC-V">
+                  <Path>src\kernel\portable\ThirdParty\GCC\RISC-V\README-for-info-on-official-MIT-license-port.txt</Path>
+                </Category>
+                <Category Name="RP2040">
+                  <Path>src\kernel\portable\ThirdParty\GCC\RP2040\CMakeLists.txt</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\RP2040\port.c</Path>
+                  <Category Name="include">
+                    <Path>src\kernel\portable\ThirdParty\GCC\RP2040\include\freertos_sdk_config.h</Path>
+                    <Path>src\kernel\portable\ThirdParty\GCC\RP2040\include\portmacro.h</Path>
+                    <Path>src\kernel\portable\ThirdParty\GCC\RP2040\include\rp2040_config.h</Path>
+                  </Category>
+                </Category>
+                <Category Name="Xtensa_ESP32">
+                  <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\FreeRTOS-openocd.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\port.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\port_common.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\port_systick.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\portasm.S</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\portmux_impl.h</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\portmux_impl.inc.h</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\xtensa_context.S</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\xtensa_init.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\xtensa_loadstore_handler.S</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\xtensa_overlay_os_hook.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\xtensa_vector_defaults.S</Path>
+                  <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\xtensa_vectors.S</Path>
+                  <Category Name="include">
+                    <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\include\FreeRTOSConfig_arch.h</Path>
+                    <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\include\port_systick.h</Path>
+                    <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\include\portbenchmark.h</Path>
+                    <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\include\portmacro.h</Path>
+                    <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\include\xt_asm_utils.h</Path>
+                    <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\include\xtensa_api.h</Path>
+                    <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\include\xtensa_config.h</Path>
+                    <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\include\xtensa_context.h</Path>
+                    <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\include\xtensa_rtos.h</Path>
+                    <Path>src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\include\xtensa_timer.h</Path>
+                  </Category>
+                </Category>
+              </Category>
+              <Category Name="XCC">
+                <Category Name="Xtensa">
+                  <Path>src\kernel\portable\ThirdParty\XCC\Xtensa\port.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\XCC\Xtensa\portasm.S</Path>
+                  <Path>src\kernel\portable\ThirdParty\XCC\Xtensa\portbenchmark.h</Path>
+                  <Path>src\kernel\portable\ThirdParty\XCC\Xtensa\portclib.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\XCC\Xtensa\portmacro.h</Path>
+                  <Path>src\kernel\portable\ThirdParty\XCC\Xtensa\porttrace.h</Path>
+                  <Path>src\kernel\portable\ThirdParty\XCC\Xtensa\readme_xtensa.txt</Path>
+                  <Path>src\kernel\portable\ThirdParty\XCC\Xtensa\xtensa_api.h</Path>
+                  <Path>src\kernel\portable\ThirdParty\XCC\Xtensa\xtensa_config.h</Path>
+                  <Path>src\kernel\portable\ThirdParty\XCC\Xtensa\xtensa_context.S</Path>
+                  <Path>src\kernel\portable\ThirdParty\XCC\Xtensa\xtensa_context.h</Path>
+                  <Path>src\kernel\portable\ThirdParty\XCC\Xtensa\xtensa_init.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\XCC\Xtensa\xtensa_intr.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\XCC\Xtensa\xtensa_intr_asm.S</Path>
+                  <Path>src\kernel\portable\ThirdParty\XCC\Xtensa\xtensa_overlay_os_hook.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\XCC\Xtensa\xtensa_rtos.h</Path>
+                  <Path>src\kernel\portable\ThirdParty\XCC\Xtensa\xtensa_timer.h</Path>
+                  <Path>src\kernel\portable\ThirdParty\XCC\Xtensa\xtensa_vectors.S</Path>
+                </Category>
+              </Category>
+              <Category Name="xClang">
+                <Category Name="XCOREAI">
+                  <Path>src\kernel\portable\ThirdParty\xClang\XCOREAI\port.c</Path>
+                  <Path>src\kernel\portable\ThirdParty\xClang\XCOREAI\portasm.S</Path>
+                  <Path>src\kernel\portable\ThirdParty\xClang\XCOREAI\portmacro.h</Path>
+                  <Path>src\kernel\portable\ThirdParty\xClang\XCOREAI\rtos_support_rtos_config.h</Path>
+                </Category>
+              </Category>
+            </Category>
+            <Category Name="WizC">
+              <Category Name="PIC18">
+                <Path>src\kernel\portable\WizC\PIC18\addFreeRTOS.h</Path>
+                <Path>src\kernel\portable\WizC\PIC18\port.c</Path>
+                <Path>src\kernel\portable\WizC\PIC18\portmacro.h</Path>
+                <Category Name="Drivers">
+                  <Category Name="Tick">
+                    <Path>src\kernel\portable\WizC\PIC18\Drivers\Tick\Tick.c</Path>
+                    <Path>src\kernel\portable\WizC\PIC18\Drivers\Tick\isrTick.c</Path>
+                  </Category>
+                </Category>
+              </Category>
+            </Category>
+            <Category Name="oWatcom">
+              <Category Name="16BitDOS">
+                <Category Name="Flsh186">
+                  <Path>src\kernel\portable\oWatcom\16BitDOS\Flsh186\port.c</Path>
+                  <Path>src\kernel\portable\oWatcom\16BitDOS\Flsh186\portmacro.h</Path>
+                </Category>
+                <Category Name="PC">
+                  <Path>src\kernel\portable\oWatcom\16BitDOS\PC\port.c</Path>
+                  <Path>src\kernel\portable\oWatcom\16BitDOS\PC\portmacro.h</Path>
+                </Category>
+                <Category Name="common">
+                  <Path>src\kernel\portable\oWatcom\16BitDOS\common\portasm.h</Path>
+                  <Path>src\kernel\portable\oWatcom\16BitDOS\common\portcomn.c</Path>
+                </Category>
+              </Category>
+            </Category>
+            <Category Name="template">
+              <Path>src\kernel\portable\template\port.c</Path>
+              <Path>src\kernel\portable\template\portmacro.h</Path>
+            </Category>
+          </Category>
+        </Category>
+        <Category Name="smc_gen">
+          <Category Name="Config_ITL">
+            <Path>src\smc_gen\Config_ITL\Config_ITL.c</Path>
+            <Path>src\smc_gen\Config_ITL\Config_ITL.h</Path>
+            <Path>src\smc_gen\Config_ITL\Config_ITL_user.c</Path>
+          </Category>
+          <Category Name="Config_PORT">
+            <Path>src\smc_gen\Config_PORT\Config_PORT.c</Path>
+            <Path>src\smc_gen\Config_PORT\Config_PORT.h</Path>
+            <Path>src\smc_gen\Config_PORT\Config_PORT_user.c</Path>
+          </Category>
+          <Category Name="general">
+            <Path>src\smc_gen\general\r_cg_itl.h</Path>
+            <Path>src\smc_gen\general\r_cg_itl_common.c</Path>
+            <Path>src\smc_gen\general\r_cg_itl_common.h</Path>
+            <Path>src\smc_gen\general\r_cg_itl_common_user.c</Path>
+            <Path>src\smc_gen\general\r_cg_macrodriver.h</Path>
+            <Path>src\smc_gen\general\r_cg_port.h</Path>
+            <Path>src\smc_gen\general\r_cg_systeminit.c</Path>
+            <Path>src\smc_gen\general\r_cg_userdefine.h</Path>
+            <Path>src\smc_gen\general\r_smc_entry.h</Path>
+          </Category>
+          <Category Name="r_bsp">
+            <Path>src\smc_gen\r_bsp\platform.h</Path>
+            <Path>src\smc_gen\r_bsp\readme.txt</Path>
+            <Category Name="board">
+              <Category Name="generic_rl78_g23">
+                <Path>src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.c</Path>
+                <Path>src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.h</Path>
+                <Path>src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp.h</Path>
+                <Path>src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference.h</Path>
+                <Path>src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_ccrl.inc</Path>
+                <Path>src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_iccrl.inc</Path>
+                <Path>src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_llvm.inc</Path>
+                <Path>src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_init.c</Path>
+                <Path>src\smc_gen\r_bsp\board\generic_rl78_g23\stkinit.asm</Path>
+              </Category>
+            </Category>
+            <Category Name="doc">
+              <Category Name="en">
+                <Path>src\smc_gen\r_bsp\doc\en\r01an5522ej0191-rl78-bsp.pdf</Path>
+              </Category>
+              <Category Name="ja">
+                <Path>src\smc_gen\r_bsp\doc\ja\r01an5522jj0191-rl78-bsp.pdf</Path>
+              </Category>
+            </Category>
+            <Category Name="mcu">
+              <Category Name="all">
+                <Path>src\smc_gen\r_bsp\mcu\all\cstart.asm</Path>
+                <Path>src\smc_gen\r_bsp\mcu\all\fsp_common_api.h</Path>
+                <Path>src\smc_gen\r_bsp\mcu\all\r_bsp_common.c</Path>
+                <Path>src\smc_gen\r_bsp\mcu\all\r_bsp_common.h</Path>
+                <Path>src\smc_gen\r_bsp\mcu\all\r_bsp_common_ccrl.asm</Path>
+                <Path>src\smc_gen\r_bsp\mcu\all\r_bsp_rl78_compiler.h</Path>
+                <Path>src\smc_gen\r_bsp\mcu\all\r_fsp_error.h</Path>
+                <Path>src\smc_gen\r_bsp\mcu\all\r_rtos.h</Path>
+              </Category>
+              <Category Name="rl78_g23">
+                <Path>src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.c</Path>
+                <Path>src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.h</Path>
+                <Path>src\smc_gen\r_bsp\mcu\rl78_g23\mcu_info.h</Path>
+                <Category Name="register_access">
+                  <Category Name="ccrl">
+                    <Path>src\smc_gen\r_bsp\mcu\rl78_g23\register_access\ccrl\iodefine.h</Path>
+                  </Category>
+                </Category>
+              </Category>
+            </Category>
+          </Category>
+          <Category Name="r_config">
+            <Path>src\smc_gen\r_config\r_bsp_config.h</Path>
+            <Path>src\smc_gen\r_config\r_bsp_config.inc</Path>
+          </Category>
+          <Category Name="r_pincfg">
+            <Path>src\smc_gen\r_pincfg\Pin.c</Path>
+            <Path>src\smc_gen\r_pincfg\Pin.h</Path>
+          </Category>
+        </Category>
+      </Category>
+      <Category Name="trash">
+        <Category Name="2025-10-16-09-34-10">
+          <Category Name="src">
+            <Category Name="smc_gen">
+              <Category Name="Config_ITL">
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\Config_ITL\Config_ITL.c</Path>
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\Config_ITL\Config_ITL.h</Path>
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\Config_ITL\Config_ITL_user.c</Path>
+              </Category>
+              <Category Name="Config_PORT">
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\Config_PORT\Config_PORT.c</Path>
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\Config_PORT\Config_PORT.h</Path>
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\Config_PORT\Config_PORT_user.c</Path>
+              </Category>
+              <Category Name="general">
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\general\r_cg_itl.h</Path>
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\general\r_cg_itl_common.c</Path>
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\general\r_cg_itl_common.h</Path>
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\general\r_cg_itl_common_user.c</Path>
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\general\r_cg_macrodriver.h</Path>
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\general\r_cg_port.h</Path>
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\general\r_cg_systeminit.c</Path>
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\general\r_cg_userdefine.h</Path>
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\general\r_smc_entry.h</Path>
+              </Category>
+              <Category Name="r_bsp">
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\platform.h</Path>
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\readme.txt</Path>
+                <Category Name="board">
+                  <Category Name="generic_rl78_g23">
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.c</Path>
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.h</Path>
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp.h</Path>
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference.h</Path>
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_ccrl.inc</Path>
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_iccrl.inc</Path>
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_config_reference_llvm.inc</Path>
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_init.c</Path>
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\board\generic_rl78_g23\stkinit.asm</Path>
+                  </Category>
+                </Category>
+                <Category Name="mcu">
+                  <Category Name="all">
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\mcu\all\cstart.asm</Path>
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\mcu\all\fsp_common_api.h</Path>
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\mcu\all\r_bsp_common.c</Path>
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\mcu\all\r_bsp_common.h</Path>
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\mcu\all\r_bsp_common_ccrl.asm</Path>
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\mcu\all\r_bsp_rl78_compiler.h</Path>
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\mcu\all\r_fsp_error.h</Path>
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\mcu\all\r_rtos.h</Path>
+                  </Category>
+                  <Category Name="rl78_g23">
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.c</Path>
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.h</Path>
+                    <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_info.h</Path>
+                    <Category Name="register_access">
+                      <Category Name="ccrl">
+                        <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\mcu\rl78_g23\register_access\ccrl\iodefine.h</Path>
+                      </Category>
+                    </Category>
+                  </Category>
+                </Category>
+              </Category>
+              <Category Name="r_config">
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_config\r_bsp_config.h</Path>
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_config\r_bsp_config.inc</Path>
+              </Category>
+              <Category Name="r_pincfg">
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_pincfg\Pin.c</Path>
+                <Path>trash\2025-10-16-09-34-10\src\smc_gen\r_pincfg\Pin.h</Path>
+              </Category>
+            </Category>
+          </Category>
+        </Category>
+      </Category>
+    </Files>
+    <Device Category="com.renesas.cdt.managedbuild.renesas.ccrl.common.option.cpu.s3" Series="RL78">R7F100GSNxFB</Device>
+    <BuildOptions Name="CC-RL" Version="v1.15.01">
+      <BuildMode Active="True" Name="HardwareDebug">
+        <GeneralOptions/>
+        <CompileOptions>
+          <Option>-cpu=S3</Option>
+          <Option>-c</Option>
+          <Option>-dev="C:/Users/a5157275/.eclipse/com.renesas.platform_1288673697/DebugComp/RL78/RL78/Common/DR7F100GSN.DVF"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\general"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_bsp\mcu\rl78_g23\register_access\ccrl"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_pincfg"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_bsp"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_config"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_bsp\mcu\rl78_g23"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_bsp\mcu\all"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_bsp\board\generic_rl78_g23"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_PORT"</Option>
+          <Option>-I "${ProjDirPath}\src\kernel\include"</Option>
+          <Option>-I "${ProjDirPath}\src\kernel\portable\Renesas\RL78"</Option>
+          <Option>-I "${ProjDirPath}\src\application\config"</Option>
+          <Option>-I "${ProjDirPath}\src\application\startup"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_ITL"</Option>
+          <Option>-character_set=utf8</Option>
+          <Option>-g</Option>
+          <Option>-o ${workspace_loc}\${ProjName}/${ConfigName}</Option>
+          <Option>-far_rom</Option>
+          <Option>-lang=c99</Option>
+        </CompileOptions>
+        <AssembleOptions>
+          <Option>-cpu=S3</Option>
+          <Option>-c</Option>
+          <Option>-dev="C:/Users/a5157275/.eclipse/com.renesas.platform_1288673697/DebugComp/RL78/RL78/Common/DR7F100GSN.DVF"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\general"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_bsp\mcu\rl78_g23\register_access\ccrl"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_pincfg"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_bsp"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_config"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_bsp\mcu\rl78_g23"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_bsp\mcu\all"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_bsp\board\generic_rl78_g23"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_PORT"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_ITL"</Option>
+          <Option>-character_set=utf8</Option>
+          <Option>-g</Option>
+          <Option>-o "${ProjDirPath}\${ConfigName}"</Option>
+        </AssembleOptions>
+        <SmsAssembleOptions>
+          <Option>-I "${ProjDirPath}\src\smc_gen\general"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_bsp\mcu\rl78_g23\register_access\ccrl"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_pincfg"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_bsp"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_config"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_bsp\mcu\rl78_g23"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_bsp\mcu\all"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\r_bsp\board\generic_rl78_g23"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_PORT"</Option>
+          <Option>-I "${ProjDirPath}\src\smc_gen\Config_ITL"</Option>
+          <Option>-o "${CWD}"</Option>
+          <Option>-character_set=utf8</Option>
+        </SmsAssembleOptions>
+        <LinkOptions>
+          <Option>-device="C:/Users/a5157275/.eclipse/com.renesas.platform_1288673697/DebugComp/RL78/RL78/Common/DR7F100GSN.DVF"</Option>
+          <Option>-list</Option>
+          <Option>-show=symbol</Option>
+          <Option>-nooptimize</Option>
+          <Option>-entry=_start</Option>
+          <Option>-auto_section_layout</Option>
+          <Option>-security_id=00000000000000000000</Option>
+          <Option>-debug_monitor=BFE00-BFFFF</Option>
+          <Option>-user_opt_byte=EF3AE8</Option>
+          <Option>-ocdbg=84</Option>
+          <Option>-stride_ocdtr_area</Option>
+          <Option>-output="${ProjName}.abs"</Option>
+          <Option>-debug</Option>
+          <Option>-nocompress</Option>
+          <Option>-memory=high</Option>
+          <Option>-split_vect</Option>
+          <Option>-rom=.data=.dataR,.sdata=.sdataR</Option>
+          <Option>-nomessage</Option>
+          <Option>-nologo</Option>
+          <Option>-end</Option>
+          <Option>-output="${ProjName}.mot"</Option>
+          <Option>-form=stype</Option>
+          <Option>-byte_count=10</Option>
+          <Option>-nomessage</Option>
+          <Option>-nologo</Option>
+          <Option>-exit</Option>
+          <PreLinker>Auto</PreLinker>
+        </LinkOptions>
+        <LibraryGenerateOptions>
+          <Option>-cpu=S3</Option>
+          <Option>-nologo</Option>
+          <Option>-lang=c99</Option>
+          <Option>-output="${ProjName}.lib"</Option>
+          <GenerateMode>BuildOptionChanged</GenerateMode>
+        </LibraryGenerateOptions>
+        <LinkOrder>
+          <Path>HardwareDebug\portasm.obj</Path>
+          <Path>HardwareDebug\stkinit.obj</Path>
+          <Path>HardwareDebug\cstart.obj</Path>
+          <Path>HardwareDebug\r_bsp_common_ccrl.obj</Path>
+          <Path>HardwareDebug\main.obj</Path>
+          <Path>HardwareDebug\user_task.obj</Path>
+          <Path>HardwareDebug\freertos_start.obj</Path>
+          <Path>HardwareDebug\freertos_user.obj</Path>
+          <Path>HardwareDebug\croutine.obj</Path>
+          <Path>HardwareDebug\event_groups.obj</Path>
+          <Path>HardwareDebug\list.obj</Path>
+          <Path>HardwareDebug\heap_4.obj</Path>
+          <Path>HardwareDebug\port.obj</Path>
+          <Path>HardwareDebug\queue.obj</Path>
+          <Path>HardwareDebug\stream_buffer.obj</Path>
+          <Path>HardwareDebug\tasks.obj</Path>
+          <Path>HardwareDebug\timers.obj</Path>
+          <Path>HardwareDebug\Config_ITL.obj</Path>
+          <Path>HardwareDebug\Config_ITL_user.obj</Path>
+          <Path>HardwareDebug\Config_PORT.obj</Path>
+          <Path>HardwareDebug\Config_PORT_user.obj</Path>
+          <Path>HardwareDebug\r_cg_itl_common.obj</Path>
+          <Path>HardwareDebug\r_cg_itl_common_user.obj</Path>
+          <Path>HardwareDebug\r_cg_systeminit.obj</Path>
+          <Path>HardwareDebug\hdwinit.obj</Path>
+          <Path>HardwareDebug\r_bsp_init.obj</Path>
+          <Path>HardwareDebug\r_bsp_common.obj</Path>
+          <Path>HardwareDebug\mcu_clocks.obj</Path>
+          <Path>HardwareDebug\Pin.obj</Path>
+          <Path>HardwareDebug\rl78g23_fpb_blinky.lib</Path>
+        </LinkOrder>
+        <NoTargetFile Target="src\kernel\examples\cmake_example\main.c"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM23\mpu_wrappers_v2_asm.c"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM23\portasm.c"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM23_NTZ\mpu_wrappers_v2_asm.c"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM23_NTZ\portasm.c"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM33\mpu_wrappers_v2_asm.c"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM33\portasm.c"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM33_NTZ\mpu_wrappers_v2_asm.c"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\non_secure\portable\GCC\ARM_CM33_NTZ\portasm.c"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM23\mpu_wrappers_v2_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM23\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM23_NTZ\mpu_wrappers_v2_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM23_NTZ\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM33\mpu_wrappers_v2_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM33\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM33_NTZ\mpu_wrappers_v2_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\non_secure\portable\IAR\ARM_CM33_NTZ\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\secure\context\portable\GCC\ARM_CM23\secure_context_port.c"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\secure\context\portable\GCC\ARM_CM33\secure_context_port.c"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\secure\context\portable\IAR\ARM_CM23\secure_context_port_asm.s"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\secure\context\portable\IAR\ARM_CM33\secure_context_port_asm.s"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\secure\context\secure_context.c"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\secure\heap\secure_heap.c"/>
+        <NoTargetFile Target="src\kernel\portable\ARMv8M\secure\init\secure_init.c"/>
+        <NoTargetFile Target="src\kernel\portable\BCC\16BitDOS\Flsh186\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\BCC\16BitDOS\PC\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\BCC\16BitDOS\common\portcomn.c"/>
+        <NoTargetFile Target="src\kernel\portable\CCS\ARM_CM3\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\CCS\ARM_CM3\portasm.asm"/>
+        <NoTargetFile Target="src\kernel\portable\CCS\ARM_CM4F\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\CCS\ARM_CM4F\portasm.asm"/>
+        <NoTargetFile Target="src\kernel\portable\CCS\ARM_Cortex-R4\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\CCS\ARM_Cortex-R4\portASM.asm"/>
+        <NoTargetFile Target="src\kernel\portable\CCS\MSP430X\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\CCS\MSP430X\portext.asm"/>
+        <NoTargetFile Target="src\kernel\portable\CodeWarrior\ColdFire_V1\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\CodeWarrior\ColdFire_V1\portasm.S"/>
+        <NoTargetFile Target="src\kernel\portable\CodeWarrior\ColdFire_V2\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\CodeWarrior\ColdFire_V2\portasm.S"/>
+        <NoTargetFile Target="src\kernel\portable\CodeWarrior\HCS12\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\Common\mpu_wrappers.c"/>
+        <NoTargetFile Target="src\kernel\portable\Common\mpu_wrappers_v2.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM7_AT91FR40008\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM7_AT91FR40008\portISR.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM7_AT91SAM7S\lib_AT91SAM7X256.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM7_AT91SAM7S\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM7_AT91SAM7S\portISR.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM7_LPC2000\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM7_LPC2000\portISR.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM7_LPC23xx\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM7_LPC23xx\portISR.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_AARCH64\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_AARCH64\portASM.S"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_AARCH64_SRE\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_AARCH64_SRE\portASM.S"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CA9\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CA9\portASM.S"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM0\mpu_wrappers_v2_asm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM0\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM0\portasm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM23\non_secure\mpu_wrappers_v2_asm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM23\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM23\non_secure\portasm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM23\secure\secure_context.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM23\secure\secure_context_port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM23\secure\secure_heap.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM23\secure\secure_init.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM23_NTZ\non_secure\mpu_wrappers_v2_asm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM23_NTZ\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM23_NTZ\non_secure\portasm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM3\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM33\non_secure\mpu_wrappers_v2_asm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM33\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM33\non_secure\portasm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM33\secure\secure_context.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM33\secure\secure_context_port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM33\secure\secure_heap.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM33\secure\secure_init.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM33_NTZ\non_secure\mpu_wrappers_v2_asm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM33_NTZ\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM33_NTZ\non_secure\portasm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM35P\non_secure\mpu_wrappers_v2_asm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM35P\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM35P\non_secure\portasm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM35P\secure\secure_context.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM35P\secure\secure_context_port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM35P\secure\secure_heap.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM35P\secure\secure_init.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM35P_NTZ\non_secure\mpu_wrappers_v2_asm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM35P_NTZ\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM35P_NTZ\non_secure\portasm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM3_MPU\mpu_wrappers_v2_asm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM3_MPU\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM4F\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM4_MPU\mpu_wrappers_v2_asm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM4_MPU\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM55\non_secure\mpu_wrappers_v2_asm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM55\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM55\non_secure\portasm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM55\secure\secure_context.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM55\secure\secure_context_port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM55\secure\secure_heap.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM55\secure\secure_init.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM55_NTZ\non_secure\mpu_wrappers_v2_asm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM55_NTZ\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM55_NTZ\non_secure\portasm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM7\r0p1\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM85\non_secure\mpu_wrappers_v2_asm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM85\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM85\non_secure\portasm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM85\secure\secure_context.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM85\secure\secure_context_port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM85\secure\secure_heap.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM85\secure\secure_init.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM85_NTZ\non_secure\mpu_wrappers_v2_asm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM85_NTZ\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CM85_NTZ\non_secure\portasm.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CR5\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CR5\portASM.S"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CRx_MPU\mpu_wrappers_v2_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CRx_MPU\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CRx_MPU\portASM.S"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CRx_No_GIC\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ARM_CRx_No_GIC\portASM.S"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ATMega323\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\AVR32_UC3\exception.S"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\AVR32_UC3\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\CORTUS_APS3\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ColdFire_V2\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\ColdFire_V2\portasm.S"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\H8S2329\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\HCS12\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\IA32_flat\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\IA32_flat\portASM.S"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\MSP430F449\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\MicroBlaze\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\MicroBlaze\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\MicroBlazeV8\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\MicroBlazeV8\port_exceptions.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\MicroBlazeV8\portasm.S"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\MicroBlazeV9\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\MicroBlazeV9\port_exceptions.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\MicroBlazeV9\portasm.S"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\NiosII\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\NiosII\port_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\PPC405_Xilinx\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\PPC405_Xilinx\portasm.S"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\PPC440_Xilinx\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\PPC440_Xilinx\portasm.S"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\RISC-V\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\RISC-V\portASM.S"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\RL78\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\RL78\portasm.S"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\RX100\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\RX200\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\RX600\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\RX600v2\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\RX700v3_DPFPU\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\STR75x\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\STR75x\portISR.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\TriCore_1782\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\GCC\TriCore_1782\porttrap.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\78K0R\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CA5_No_GIC\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CA5_No_GIC\portASM.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CA9\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CA9\portASM.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM0\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM0\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM23\non_secure\mpu_wrappers_v2_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM23\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM23\non_secure\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM23\secure\secure_context.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM23\secure\secure_context_port_asm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM23\secure\secure_heap.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM23\secure\secure_init.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM23_NTZ\non_secure\mpu_wrappers_v2_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM23_NTZ\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM23_NTZ\non_secure\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM3\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM3\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM33\non_secure\mpu_wrappers_v2_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM33\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM33\non_secure\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM33\secure\secure_context.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM33\secure\secure_context_port_asm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM33\secure\secure_heap.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM33\secure\secure_init.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM33_NTZ\non_secure\mpu_wrappers_v2_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM33_NTZ\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM33_NTZ\non_secure\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM35P\non_secure\mpu_wrappers_v2_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM35P\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM35P\non_secure\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM35P\secure\secure_context.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM35P\secure\secure_context_port_asm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM35P\secure\secure_heap.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM35P\secure\secure_init.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM35P_NTZ\non_secure\mpu_wrappers_v2_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM35P_NTZ\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM35P_NTZ\non_secure\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM4F\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM4F\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM4F_MPU\mpu_wrappers_v2_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM4F_MPU\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM4F_MPU\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM55\non_secure\mpu_wrappers_v2_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM55\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM55\non_secure\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM55\secure\secure_context.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM55\secure\secure_context_port_asm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM55\secure\secure_heap.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM55\secure\secure_init.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM55_NTZ\non_secure\mpu_wrappers_v2_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM55_NTZ\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM55_NTZ\non_secure\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM7\r0p1\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM7\r0p1\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM85\non_secure\mpu_wrappers_v2_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM85\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM85\non_secure\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM85\secure\secure_context.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM85\secure\secure_context_port_asm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM85\secure\secure_heap.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM85\secure\secure_init.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM85_NTZ\non_secure\mpu_wrappers_v2_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM85_NTZ\non_secure\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CM85_NTZ\non_secure\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CRx_No_GIC\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ARM_CRx_No_GIC\portASM.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\ATMega323\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\AVR32_UC3\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\AVR32_UC3\read.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\AVR32_UC3\write.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\AVR_AVRDx\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\AVR_Mega0\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\AtmelSAM7S64\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\AtmelSAM9XE\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\LPC2000\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\MSP430\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\MSP430X\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\RISC-V\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\RISC-V\portASM.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\RL78\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\RL78\portasm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\RX100\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\RX100\port_asm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\RX600\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\RX600\port_asm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\RX700v3_DPFPU\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\RXv2\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\RXv2\port_asm.s"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\STR71x\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\STR75x\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\STR91x\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\IAR\V850ES\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\MPLAB\PIC18F\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\MPLAB\PIC24_dsPIC\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\MPLAB\PIC24_dsPIC\portasm_PIC24.S"/>
+        <NoTargetFile Target="src\kernel\portable\MPLAB\PIC24_dsPIC\portasm_dsPIC.S"/>
+        <NoTargetFile Target="src\kernel\portable\MPLAB\PIC32MEC14xx\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\MPLAB\PIC32MEC14xx\port_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\MPLAB\PIC32MX\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\MPLAB\PIC32MX\port_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\MPLAB\PIC32MZ\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\MPLAB\PIC32MZ\port_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\MSVC-MingW\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\MemMang\heap_1.c"/>
+        <NoTargetFile Target="src\kernel\portable\MemMang\heap_2.c"/>
+        <NoTargetFile Target="src\kernel\portable\MemMang\heap_3.c"/>
+        <NoTargetFile Target="src\kernel\portable\MemMang\heap_5.c"/>
+        <NoTargetFile Target="src\kernel\portable\MikroC\ARM_CM4F\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\Paradigm\Tern_EE\large_untested\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\Paradigm\Tern_EE\small\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\RVDS\ARM7_LPC21xx\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\RVDS\ARM7_LPC21xx\portASM.s"/>
+        <NoTargetFile Target="src\kernel\portable\RVDS\ARM_CA9\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\RVDS\ARM_CA9\portASM.s"/>
+        <NoTargetFile Target="src\kernel\portable\RVDS\ARM_CM0\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\RVDS\ARM_CM3\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\RVDS\ARM_CM4F\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\RVDS\ARM_CM4_MPU\mpu_wrappers_v2_asm.c"/>
+        <NoTargetFile Target="src\kernel\portable\RVDS\ARM_CM4_MPU\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\RVDS\ARM_CM7\r0p1\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\Renesas\RX100\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\Renesas\RX100\port_asm.src"/>
+        <NoTargetFile Target="src\kernel\portable\Renesas\RX200\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\Renesas\RX200\port_asm.src"/>
+        <NoTargetFile Target="src\kernel\portable\Renesas\RX600\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\Renesas\RX600\port_asm.src"/>
+        <NoTargetFile Target="src\kernel\portable\Renesas\RX600v2\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\Renesas\RX600v2\port_asm.src"/>
+        <NoTargetFile Target="src\kernel\portable\Renesas\RX700v3_DPFPU\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\Renesas\RX700v3_DPFPU\port_asm.src"/>
+        <NoTargetFile Target="src\kernel\portable\Renesas\SH2A_FPU\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\Renesas\SH2A_FPU\portasm.src"/>
+        <NoTargetFile Target="src\kernel\portable\Rowley\MSP430F449\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\Rowley\MSP430F449\portext.asm"/>
+        <NoTargetFile Target="src\kernel\portable\SDCC\Cygnal\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\Softune\MB91460\__STD_LIB_sbrk.c"/>
+        <NoTargetFile Target="src\kernel\portable\Softune\MB91460\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\Softune\MB96340\__STD_LIB_sbrk.c"/>
+        <NoTargetFile Target="src\kernel\portable\Softune\MB96340\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\Tasking\ARM_CM4F\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\Tasking\ARM_CM4F\port_asm.asm"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\CDK\T-HEAD_CK802\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\CDK\T-HEAD_CK802\portasm.S"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\ARC_EM_HS\arc_freertos_exceptions.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\ARC_EM_HS\arc_support.s"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\ARC_EM_HS\freertos_tls.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\ARC_EM_HS\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\ARC_v1\arc_freertos_exceptions.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\ARC_v1\arc_support.s"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\ARC_v1\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\ARM_TFM\os_wrapper_freertos.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\ATmega\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\Posix\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\Posix\utils\wait_for_event.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\RP2040\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\FreeRTOS-openocd.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\port_common.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\port_systick.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\portasm.S"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\xtensa_context.S"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\xtensa_init.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\xtensa_loadstore_handler.S"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\xtensa_overlay_os_hook.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\xtensa_vector_defaults.S"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\GCC\Xtensa_ESP32\xtensa_vectors.S"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\XCC\Xtensa\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\XCC\Xtensa\portasm.S"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\XCC\Xtensa\portclib.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\XCC\Xtensa\xtensa_context.S"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\XCC\Xtensa\xtensa_init.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\XCC\Xtensa\xtensa_intr.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\XCC\Xtensa\xtensa_intr_asm.S"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\XCC\Xtensa\xtensa_overlay_os_hook.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\XCC\Xtensa\xtensa_vectors.S"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\xClang\XCOREAI\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\ThirdParty\xClang\XCOREAI\portasm.S"/>
+        <NoTargetFile Target="src\kernel\portable\WizC\PIC18\Drivers\Tick\Tick.c"/>
+        <NoTargetFile Target="src\kernel\portable\WizC\PIC18\Drivers\Tick\isrTick.c"/>
+        <NoTargetFile Target="src\kernel\portable\WizC\PIC18\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\oWatcom\16BitDOS\Flsh186\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\oWatcom\16BitDOS\PC\port.c"/>
+        <NoTargetFile Target="src\kernel\portable\oWatcom\16BitDOS\common\portcomn.c"/>
+        <NoTargetFile Target="src\kernel\portable\template\port.c"/>
+        <NoTargetFile Target="trash\2025-10-16-09-34-10\src\smc_gen\Config_ITL\Config_ITL.c"/>
+        <NoTargetFile Target="trash\2025-10-16-09-34-10\src\smc_gen\Config_ITL\Config_ITL_user.c"/>
+        <NoTargetFile Target="trash\2025-10-16-09-34-10\src\smc_gen\Config_PORT\Config_PORT.c"/>
+        <NoTargetFile Target="trash\2025-10-16-09-34-10\src\smc_gen\Config_PORT\Config_PORT_user.c"/>
+        <NoTargetFile Target="trash\2025-10-16-09-34-10\src\smc_gen\general\r_cg_itl_common.c"/>
+        <NoTargetFile Target="trash\2025-10-16-09-34-10\src\smc_gen\general\r_cg_itl_common_user.c"/>
+        <NoTargetFile Target="trash\2025-10-16-09-34-10\src\smc_gen\general\r_cg_systeminit.c"/>
+        <NoTargetFile Target="trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\board\generic_rl78_g23\hdwinit.c"/>
+        <NoTargetFile Target="trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\board\generic_rl78_g23\r_bsp_init.c"/>
+        <NoTargetFile Target="trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\board\generic_rl78_g23\stkinit.asm"/>
+        <NoTargetFile Target="trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\mcu\all\cstart.asm"/>
+        <NoTargetFile Target="trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\mcu\all\r_bsp_common.c"/>
+        <NoTargetFile Target="trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\mcu\all\r_bsp_common_ccrl.asm"/>
+        <NoTargetFile Target="trash\2025-10-16-09-34-10\src\smc_gen\r_bsp\mcu\rl78_g23\mcu_clocks.c"/>
+        <NoTargetFile Target="trash\2025-10-16-09-34-10\src\smc_gen\r_pincfg\Pin.c"/>
+        <CommonOptions>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\general"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\r_bsp\mcu\rl78_g23\register_access\ccrl"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\r_pincfg"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\r_bsp"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\r_config"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\r_bsp\mcu\rl78_g23"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\r_bsp\mcu\all"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\r_bsp\board\generic_rl78_g23"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\Config_PORT"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\kernel\include"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\kernel\portable\Renesas\RL78"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\application\config"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\application\startup"</IncludePathForC>
+          <IncludePathForC>"${ProjDirPath}\src\smc_gen\Config_ITL"</IncludePathForC>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\general"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\r_bsp\mcu\rl78_g23\register_access\ccrl"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\r_pincfg"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\r_bsp"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\r_config"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\r_bsp\mcu\rl78_g23"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\r_bsp\mcu\all"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\r_bsp\board\generic_rl78_g23"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\Config_PORT"</IncludePathForAsm>
+          <IncludePathForAsm>"${ProjDirPath}\src\smc_gen\Config_ITL"</IncludePathForAsm>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\general"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\r_bsp\mcu\rl78_g23\register_access\ccrl"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\r_pincfg"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\r_bsp"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\r_config"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\r_bsp\mcu\rl78_g23"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\r_bsp\mcu\all"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\r_bsp\board\generic_rl78_g23"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\Config_PORT"</IncludePathForSms>
+          <IncludePathForSms>"${ProjDirPath}\src\smc_gen\Config_ITL"</IncludePathForSms>
+        </CommonOptions>
+      </BuildMode>
+    </BuildOptions>
+  </Project>
+</MicomToolCommonProjectFile>
