@@ -1,6 +1,6 @@
 [submodule "RL78/rl78g14_fpb_blinky/src/kernel"]
 	path = RL78/rl78g14_fpb_blinky/src/kernel
-	url = git@gitlab.global.renesas.com:products/common/rtos/amazon-freertos/kernel/freertos-kernel.git
+	url = https://github.com/renesas/FreeRTOS-Kernel
 [submodule "RL78/rl78g23_fpb_blinky/src/kernel"]
 	path = RL78/rl78g23_fpb_blinky/src/kernel
-	url = git@gitlab.global.renesas.com:products/common/rtos/amazon-freertos/kernel/freertos-kernel.git
+	url = https://github.com/renesas/FreeRTOS-Kernel
