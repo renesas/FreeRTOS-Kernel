@@ -154,7 +154,7 @@
         </incdir>
         <incdir>
             <path>src/frtos_startup</path>
-            <path>src/application/config</path>
+            <path>src/frtos_config</path>
             <path>src/application/startup</path>
         </incdir>
         <!-- copy source codes -->
@@ -174,7 +174,7 @@
         </impdir>
         <impdir>
             <folder>configuration/config_files</folder>
-            <path>src/application/config</path>
+            <path>src/frtos_config</path>
         </impdir>
         <impdir>
             <folder>configuration/startup</folder>
@@ -358,41 +358,41 @@
     <!-- The redundant zero number before a numerical data may cause it to be wrong, because some numerical data are input of an javascript engine -->
     <heap>
         <property id="configUSE_TRACE_FACILITY">
-            <path>src/application/config/FreeRTOSConfig.h</path>
+            <path>src/frtos_config/FreeRTOSConfig.h</path>
         </property>
         <property id="configUSE_MUTEXES">
-            <path>src/application/config/FreeRTOSConfig.h</path>
+            <path>src/frtos_config/FreeRTOSConfig.h</path>
         </property>
         <property id="configUSE_APPLICATION_TASK_TAG">
-            <path>src/application/config/FreeRTOSConfig.h</path>
+            <path>src/frtos_config/FreeRTOSConfig.h</path>
         </property>
         <property id="configUSE_QUEUE_SETS">
             <id>configUSE_QUEUE_SETS</id>
-            <path>src/application/config/FreeRTOSConfig.h</path>
+            <path>src/frtos_config/FreeRTOSConfig.h</path>
         </property>
         <property id="configRECORD_STACK_HIGH_ADDRESS">
-            <priorityPath>src/application/config/FreeRTOSConfig.h</priorityPath>
+            <priorityPath>src/frtos_config/FreeRTOSConfig.h</priorityPath>
             <path>src/FreeRTOS/Source/include/FreeRTOS.h</path>
         </property>
         <property id="configNUM_THREAD_LOCAL_STORAGE_POINTERS">
-            <priorityPath>src/application/config/FreeRTOSConfig.h</priorityPath>
+            <priorityPath>src/frtos_config/FreeRTOSConfig.h</priorityPath>
             <path>src/FreeRTOS/Source/include/FreeRTOS.h</path>
         </property>
         <property id="configUSE_TASK_NOTIFICATIONS">
-            <priorityPath>src/application/config/FreeRTOSConfig.h</priorityPath>
+            <priorityPath>src/frtos_config/FreeRTOSConfig.h</priorityPath>
             <path>src/FreeRTOS/Source/include/FreeRTOS.h</path>
         </property>
         <property id="configSUPPORT_STATIC_ALLOCATION">
-            <priorityPath>src/application/config/FreeRTOSConfig.h</priorityPath>
+            <priorityPath>src/frtos_config/FreeRTOSConfig.h</priorityPath>
             <path>src/FreeRTOS/Source/include/FreeRTOS.h</path>
         </property>
         <property id="configSUPPORT_DYNAMIC_ALLOCATION">
             <id>configSUPPORT_DYNAMIC_ALLOCATION</id>
-            <priorityPath>src/application/config/FreeRTOSConfig.h</priorityPath>
+            <priorityPath>src/frtos_config/FreeRTOSConfig.h</priorityPath>
             <path>src/FreeRTOS/Source/include/FreeRTOS.h</path>
         </property>
         <property id="configGENERATE_RUN_TIME_STATS">
-            <priorityPath>src/application/config/FreeRTOSConfig.h</priorityPath>
+            <priorityPath>src/frtos_config/FreeRTOSConfig.h</priorityPath>
             <path>src/FreeRTOS/Source/include/FreeRTOS.h</path>
         </property>
         <property id="portBYTE_ALIGNMENT">
@@ -484,16 +484,16 @@
             <dependency>portBYTE_ALIGNMENT</dependency>
         </property>
         <property id="configMINIMAL_STACK_SIZE">
-            <path>src/application/config/FreeRTOSConfig.h</path>
+            <path>src/frtos_config/FreeRTOSConfig.h</path>
         </property>
         <property id="configTIMER_TASK_STACK_DEPTH">
-            <path>src/application/config/FreeRTOSConfig.h</path>
+            <path>src/frtos_config/FreeRTOSConfig.h</path>
         </property>
         <property id="configTIMER_QUEUE_LENGTH">
-            <path>src/application/config/FreeRTOSConfig.h</path>
+            <path>src/frtos_config/FreeRTOSConfig.h</path>
         </property>
         <property id="configUSE_TIMERS">
-            <path>src/application/config/FreeRTOSConfig.h</path>
+            <path>src/frtos_config/FreeRTOSConfig.h</path>
         </property>
         <controlBlock id="TaskControlBlock" value="72">
             <addition>
